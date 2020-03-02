@@ -3,19 +3,19 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # USER RELATED ROUTES
-resources: :users, only: :show do
+resources :users, only: :show do
   # NESTED CHOICES RELATED ROUTES
-  resources: :choices, only: :create
+  resources :choices, only: :create
 end
 
 # BEERS RELATED ROUTES
-resources: :beers, only: [:index, :show]
+resources :beers, only: [:index, :show]
 
 # CHOICES NON NESTED ROUTES
-resources: :choices, only: :show
+resources :choices, only: :show
 
 # TAGS RELATED ROUTES
-resources: :tags, only: :index
+resources :tags, only: :index
 
 
 end
