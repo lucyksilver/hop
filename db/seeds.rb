@@ -80,6 +80,18 @@ p pub_1
 pb1 = PubBeer.create!(pub: pub_1, beer: beer_1)
 pb2 = PubBeer.create!(pub: pub_2, beer: beer_1)
 pb3 = PubBeer.create!(pub: pub_3, beer: beer_1)
+pb4 = PubBeer.create!(pub: pub_1, beer: beer_2)
+pb5 = PubBeer.create!(pub: pub_2, beer: beer_2)
+pb6 = PubBeer.create!(pub: pub_3, beer: beer_2)
+pb7 = PubBeer.create!(pub: pub_1, beer: beer_3)
+pb8 = PubBeer.create!(pub: pub_2, beer: beer_3)
+pb9 = PubBeer.create!(pub: pub_3, beer: beer_3)
+pb10 = PubBeer.create!(pub: pub_1, beer: beer_4)
+pb11 = PubBeer.create!(pub: pub_2, beer: beer_4)
+pb12 = PubBeer.create!(pub: pub_3, beer: beer_4)
+pb13 = PubBeer.create!(pub: pub_1, beer: beer_5)
+pb14 = PubBeer.create!(pub: pub_2, beer: beer_5)
+pb15 = PubBeer.create!(pub: pub_3, beer: beer_5)
 
 
 choice_1 = Choice.create!(user: user, pub: pub_1, beer: beer_1)
