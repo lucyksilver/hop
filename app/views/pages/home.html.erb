@@ -5,5 +5,9 @@
   %>
   <%= submit_tag "Search" %>
 <% end %>
+
 <h1><%= link_to "HOP!", tags_path %></h1>
-<h3><%= link_to "Randomise" %></h3>
+
+<%= simple_form_for :randomise, url: beers_path, method: :get do |f| %>
+  <%= f.submit 'Randomise' %>
+<% end %>
