@@ -10,8 +10,9 @@ require 'open-uri'
 
 
 Choice.destroy_all
-Pub.destroy_all
 BeerTag.destroy_all
+PubBeer.destroy_all
+Pub.destroy_all
 User.destroy_all
 Beer.destroy_all
 
@@ -75,6 +76,11 @@ pub_1 = Pub.create!(name: "The silver octopus", description:"great punk night on
 pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"20 Apple Road")
 pub_3 = Pub.create!(name: "The racoon saloon", description:"excellent taxidermy", address:"1 Pinecone Lane")
 p pub_1
+
+pb1 = PubBeer.create!(pub: pub_1, beer: beer_1)
+pb2 = PubBeer.create!(pub: pub_2, beer: beer_1)
+pb3 = PubBeer.create!(pub: pub_3, beer: beer_1)
+
 
 choice_1 = Choice.create!(user: user, pub: pub_1, beer: beer_1)
 choice_1 = Choice.create!(user: user, pub: pub_2, beer: beer_4)
