@@ -14,5 +14,7 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
+    @choice = Choice.new
   end
 end
+

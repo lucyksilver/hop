@@ -2,21 +2,30 @@ class ChoicesController < ApplicationController
 
   def show
     @choice = Choice.find(params[:id])
+  end
 
+  def new
+    @user = current_user
   end
 
   def create
-    @beer = Beer.find(params[:item_id])
-    user = current_user
-    # THE PUB ID WILL COME FROM THE BEER SHOW PAGE FORM
+    @beer = Beer.find(params[:beer_id])
+    @user = current_user
+    # @pubs = @beer.pubs
     @choice = Choice.new(choice_params)
     @choice.beer = @beer
-    @choice.user = user
+    @choice.user = @user
     if @choice.save
-      redirect_to
+      raise
+      redirect_to choice_path(@choice)
     else
-      render :new
+      render "beers/show"
     end
+  end
 
+  private
+
+  def choice_params
+    params.require(:choice).permit(:user_id, :pub_id, :beer_id)
   end
 end
