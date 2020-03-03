@@ -72,9 +72,9 @@ BeerTag.create!(beer: beer_5, tag: dark);
 p beer_1
 
 
-pub_1 = Pub.create!(name: "The silver octopus", description:"great punk night on thursdays", address:"64 Tentacle Street")
-pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"20 Apple Road")
-pub_3 = Pub.create!(name: "The racoon saloon", description:"excellent taxidermy", address:"1 Pinecone Lane")
+pub_1 = Pub.create!(name: "The silver octopus", description:"great punk night on thursdays", address:"141 Albert St, Camden Town, London NW1 7NB")
+pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"49 Regent's Park Rd, Primrose Hill, London NW1 8XD")
+pub_3 = Pub.create!(name: "The racoon saloon", description:"excellent taxidermy", address:"397-400 Geffrye St, London E2 8HZ")
 p pub_1
 
 pb1 = PubBeer.create!(pub: pub_1, beer: beer_1)
