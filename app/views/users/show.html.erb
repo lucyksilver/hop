@@ -1,1 +1,17 @@
-show.html.erb
+<h1><%= @user.username %></h1>
+
+<div class="cards-home">
+  <% @user.choices.each do |choice| %>
+
+    <div class="card-home">
+        <!-- filter above card done in card.scss -->
+      <%= link_to "", choice_path(choice), class: "card-link" %>
+      <div class="card-home-image" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')"></div>
+      <div class="card-content">
+        <p><%= choice.beer.name %></p>
+        <p><%= choice.pub.name %></p>
+      </div>
+    </div>
+
+  <% end %>
+</div>
