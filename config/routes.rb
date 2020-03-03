@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   # USER RELATED ROUTES
 resources :users, only: :show do
   # NESTED CHOICES RELATED ROUTES
-  resources :choices, only: :create
 end
 
 # BEERS RELATED ROUTES
-resources :beers, only: [:index, :show]
+resources :beers, only: [:index, :show] do
+  resources :choices, only: :create
+end
 
 # CHOICES NON NESTED ROUTES
 resources :choices, only: :show
