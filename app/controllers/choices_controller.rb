@@ -2,10 +2,21 @@ class ChoicesController < ApplicationController
 
   def show
     @choice = Choice.find(params[:id])
+
+    @pub = @choice.pub
+    @pubs = Pub.geocoded # returns flats with coordinates
+
+    @markers =
+      [{
+        lat: @pub.latitude,
+        lng: @pub.longitude
+      }]
+
   end
 
   def new
     @user = current_user
+
   end
 
   def create
