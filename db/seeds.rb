@@ -75,6 +75,7 @@ p beer_1
 pub_1 = Pub.create!(name: "The silver octopus", description:"great punk night on thursdays", address:"141 Albert St, Camden Town, London NW1 7NB")
 pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"49 Regent's Park Rd, Primrose Hill, London NW1 8XD")
 pub_3 = Pub.create!(name: "The racoon saloon", description:"excellent taxidermy", address:"397-400 Geffrye St, London E2 8HZ")
+pub_4 = Pub.create!(name: "The glitter horse", description:"wonderful pub", address:"93 Leonard St, Hackney, London EC2A 4RD")
 p pub_1
 
 pb1 = PubBeer.create!(pub: pub_1, beer: beer_1)
@@ -92,6 +93,7 @@ pb12 = PubBeer.create!(pub: pub_3, beer: beer_4)
 pb13 = PubBeer.create!(pub: pub_1, beer: beer_5)
 pb14 = PubBeer.create!(pub: pub_2, beer: beer_5)
 pb15 = PubBeer.create!(pub: pub_3, beer: beer_5)
+pb16 = PubBeer.create!(pub: pub_4, beer: beer_1)
 
 
 choice_1 = Choice.create!(user: user, pub: pub_1, beer: beer_1)
