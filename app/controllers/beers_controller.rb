@@ -2,7 +2,9 @@
 class BeersController < ApplicationController
 
   def index
-    if params[:search]
+    if params[:query]
+      @beers = Beer.search_by_name(params[:query])
+    elsif params[:search]
       # includes acces the info of beers tags in the where
 
       tag_ids = params[:search][:tags].reject { |id| id == ""}
