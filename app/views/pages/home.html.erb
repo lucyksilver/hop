@@ -8,6 +8,8 @@
 
 <h1><%= link_to "HOP!", tags_path %></h1>
 
-<%= simple_form_for :randomise, url: beers_path, method: :get do |f| %>
-  <%= f.submit 'Randomise' %>
+<%= form_tag beers_path, method: :get do %>
+  <%= params[:randomise]
+  %>
+  <%= submit_tag "Randomise" %>
 <% end %>
