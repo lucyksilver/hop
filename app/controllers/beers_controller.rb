@@ -1,7 +1,7 @@
+
 class BeersController < ApplicationController
 
   def index
-
     if params[:search]
       # includes acces the info of beers tags in the where
 
@@ -10,7 +10,6 @@ class BeersController < ApplicationController
     else
       @beers = Beer.all
     end
-
   end
 
   def show
