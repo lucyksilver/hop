@@ -13,13 +13,18 @@ class BeersController < ApplicationController
       tag_ids = params[:search][:tags].reject { |id| id == ""}
       @beers = Beer.includes(:beer_tags).where(beer_tags: { tag_id: tag_ids })
     else
-      @beers = Beer.all.sample(3)
+      @beers = Beer.all
     end
+    # @random_beers = Beer.all.sample(3)
   end
 
   def show
     @beer = Beer.find(params[:id])
     @choice = Choice.new
+  end
+
+  def random
+    @beers = Beer.all.sample(3)
   end
 end
 
