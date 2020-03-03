@@ -27,7 +27,6 @@ class ChoicesController < ApplicationController
     @choice.beer = @beer
     @choice.user = @user
     if @choice.save
-      raise
       redirect_to choice_path(@choice)
     else
       render "beers/show"

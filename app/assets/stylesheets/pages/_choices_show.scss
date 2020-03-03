@@ -1,0 +1,22 @@
+.choice-show-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.item-right-half {
+  width: 50%;
+  height: 100vh;
+}
+
+.item-left-half {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 80%;
+  }
+}
