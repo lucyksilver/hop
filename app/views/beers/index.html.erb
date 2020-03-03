@@ -1,1 +1,12 @@
 
+<h1>Pick your brew</h1>
+<p>We have <%= pluralize @beers.count, "beer" %> matching your search</p>
+<ul>
+  <% @beers.each do |beer| %>
+    <li><%= link_to beer.name, beer_path(beer) %></li>
+    <% beer.tags.each do |tag| %>
+      <p><%= tag.name %></p>
+    <% end %>
+  <% end %>
+</ul>
+

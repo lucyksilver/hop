@@ -1,0 +1,37 @@
+.cards-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
+
+.card-home {
+  position: relative;
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+.card-link {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.card-home-image {
+  height: 200px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
+  margin-bottom: 16px;
+}
