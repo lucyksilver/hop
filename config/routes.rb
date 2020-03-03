@@ -10,6 +10,9 @@ end
 # BEERS RELATED ROUTES
 resources :beers, only: [:index, :show] do
   resources :choices, only: :create
+  collection do
+    get :random
+  end
 end
 
 # CHOICES NON NESTED ROUTES

@@ -1,0 +1,10 @@
+<h1>Pick your brew</h1>
+<ul>
+  <% @beers.each do |beer| %>
+    <li><%= link_to beer.name, beer_path(beer) %></li>
+    <% beer.tags.each do |tag| %>
+      <p><%= tag.name %></p>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to "Randomise", random_beers_path %>
