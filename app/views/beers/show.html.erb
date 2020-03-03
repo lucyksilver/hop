@@ -1,25 +1,25 @@
 
 <div class="beer-show-container">
-  <div class="beer=left-half">
+  <div class="beer-left-half" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+  </div>
+
+  <div class="beer-right-half">
       <div class="content">
         <h1><%= @beer.name %></h1>
         <p>Beer description: <%= @beer.description %></p>
 
-        <p>Tags that belong to this beer:</p>
+        <p>Beer tags:
           <% @beer.tags.each do |tag| %>
           <%= tag.name %>
-          <% end %>
-      </div>
+          <% end %></p>
 
-      <div>
-        <h2>Choose your pub</h2>
+
           <div class="choice-form">
+            <h2>Choose your pub</h2>
             <%= render "choices/form", choice: @choice, beer: @beer %>
           </div>
       </div>
   </div>
-  <div class="item-right-half" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-    </div>
 
 
 
