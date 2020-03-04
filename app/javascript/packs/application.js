@@ -23,10 +23,12 @@ require("channels")
 // ----------------------------------------------------
 import { initMapbox } from '../plugins/init_mapbox';
 import { pubSelection } from '../components/pub_selection';
+import { tagSelection } from '../components/tag_selection';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   pubSelection();
+  tagSelection();
 })
 
 
