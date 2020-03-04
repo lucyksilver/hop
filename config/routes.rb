@@ -9,8 +9,11 @@ end
 
 # BEERS RELATED ROUTES
 resources :beers, only: [:index, :show] do
+  #LIKES RELATED ROUTES
+  resources :likes, only: [:create]
   resources :choices, only: :create
   collection do
+
     get :random
   end
 end
@@ -20,6 +23,6 @@ resources :choices, only: :show
 
 # TAGS RELATED ROUTES
 resources :tags, only: :index
-
+resources :likes, only: [:destroy]
 
 end
