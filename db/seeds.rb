@@ -17,7 +17,7 @@ Pub.destroy_all
 User.destroy_all
 Beer.destroy_all
 
-user = User.create!(email: "test1@test.com", password:"123123", username: "test")
+user = User.create!(email: "test1@test.com", password:"123123", username: "test", address: "138 Kingsland Rd, London E2 8DY")
 p user
 
 fruity = Tag.create!(name: "Fruity", description: "Fruit has been added to the brew to create interesting, floral flavours")

@@ -11,4 +11,10 @@ class Beer < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def closest_distance(user)
+    pubs.map do |pub|
+      Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[user.latitude, user.longitude])
+    end.min
+  end
 end
