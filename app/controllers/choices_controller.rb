@@ -9,7 +9,14 @@ class ChoicesController < ApplicationController
     @markers =
       [{
         lat: @pub.latitude,
-        lng: @pub.longitude
+        lng: @pub.longitude,
+        infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
+        image_url: helpers.asset_url('beer_icon.png')
+      }, {
+        lat: current_user.latitude,
+        lng: current_user.longitude,
+        infoWindow: render_to_string(partial: "info_window_user", locals: { user: current_user }),
+        image_url: helpers.asset_url('avatar.jpg')
       }]
 
   end
