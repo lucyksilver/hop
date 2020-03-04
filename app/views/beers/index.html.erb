@@ -15,8 +15,10 @@
       <% end %>
   </div>
 
-  <% if @beers.count < Beer.all.count %>
-    <%= link_to "View all", beers_path %>
-  <% end %>
+  <div>
+    <% if @beers.count < Beer.all.count %>
+      <%= link_to "View all", beers_path, class: "btn-dark" %>
+    <% end %>
+  </div>
 
 </div>
