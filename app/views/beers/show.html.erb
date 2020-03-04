@@ -17,10 +17,10 @@
           <div class="choice-form">
             <h2>Choose your pub</h2>
             <%= render "choices/form", choice: @choice, beer: @beer %>
+            <%= link_to "View all", beer_path(@beer, view_all: true) %>
           </div>
       </div>
   </div>
 
-
-
+</div>
 

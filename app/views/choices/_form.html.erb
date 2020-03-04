@@ -1,9 +1,12 @@
 <%= simple_form_for [beer, choice] do |f| %>
-  <%= f.input :pub_id, as: :radio_buttons,
-  collection: beer.pubs.map { |p| [p.name, p.id] },
-  wrapper_hmtl: { class: 'inline-radio' },
-  label_method: :first,
-  value_method: :last %>
+  <% if params[:view_all] %>
+    <% array_of_pubs = beer.pubs %>
+  <% else %>
+    <% array_of_pubs = beer.pubs.sample(3) %>
+  <% end %>
+  <%= f.input :pub, as: :radio_buttons,
+  collection: array_of_pubs,
+  wrapper_hmtl: { class: 'inline-radio' } %>
 
   <%= f.submit %>
 <% end %>
