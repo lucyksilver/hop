@@ -2,7 +2,6 @@ class BeersController < ApplicationController
 
   def index
     # raise
-
     if params[:query]
       if params[:query].strip.empty?
         @beers = Beer.all
