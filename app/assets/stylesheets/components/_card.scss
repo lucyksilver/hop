@@ -2,9 +2,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 60px;
+  cursor: pointer;
 }
 
 .card-home {
+  cursor: pointer;
   position: relative;
   background-color: yellow;
   padding: 20px;
@@ -34,4 +36,12 @@
   background-position: center;
   border-radius: 7px;
   margin-bottom: 16px;
+}
+
+.click-hand {
+  cursor: pointer;
+}
+
+.card-border {
+  border: 2px blue solid;
 }
