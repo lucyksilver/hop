@@ -22,9 +22,11 @@ require("channels")
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import { initMapbox } from '../plugins/init_mapbox';
+import { myFunction } from '../components/pub_selection';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  myFunction();
 })
 
 

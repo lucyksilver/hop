@@ -12,6 +12,7 @@ require 'open-uri'
 Choice.destroy_all
 BeerTag.destroy_all
 PubBeer.destroy_all
+Tag.destroy_all
 Pub.destroy_all
 User.destroy_all
 Beer.destroy_all
