@@ -16,11 +16,9 @@
 
     <div class='cards-home'>
       <% array_of_pubs.each do |pub| %>
-      <div class="card-home" id="pub-border">
-        <div class="form-check">
-          <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
-          <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
-        </div>
+      <div class="card-home pub-card-home" id="pub-border">
+        <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
+        <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
         <p><%= (Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away </p>
       </div>
 

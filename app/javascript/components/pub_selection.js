@@ -1,5 +1,5 @@
 const pubSelection = () => {
-  const pubs = document.querySelectorAll(".card-home .form-check-label");
+  const pubs = document.querySelectorAll("#new_choice .card-home .form-check-label");
   pubs.forEach((pub) => {
     pub.addEventListener("click", (event) => {
       // event.preventDefault();
@@ -9,7 +9,7 @@ const pubSelection = () => {
 
         otherCard.classList.remove("card-border");
       }
-      event.currentTarget.parentNode.parentNode.classList.toggle('card-border');
+      event.currentTarget.parentNode.classList.toggle('card-border');
     });
   });
 };
