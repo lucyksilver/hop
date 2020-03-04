@@ -8,9 +8,9 @@
         <div class="card-home-image" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')"></div>
         <p><%= beer.name%></p>
             <% if beer.liked_by(current_user) %>
-            <%= link_to "like", like_path(beer.likes.find_by(user: current_user), page: :index), method: :delete, class: "like-card-link" %>
+            <%= link_to "unlike", like_path(beer.likes.find_by(user: current_user), page: :index), method: :delete, class: "like-card-link" %>
             <% else %>
-              <%= link_to "unlike",beer_likes_path(beer, page: :index), method: :post, class: "like-card-link" %>
+              <%= link_to "like",beer_likes_path(beer, page: :index), method: :post, class: "like-card-link" %>
             <% end %>
         <% beer.tags.each do |tag| %>
           <p><%= tag.name %></p>
