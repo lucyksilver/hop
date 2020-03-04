@@ -29,6 +29,16 @@
   z-index: 1;
 }
 
+.like-card-link {
+  z-index: 2;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  &:hover {
+    color: gold;
+  }
+}
+
 .card-home-image {
   height: 200px;
   margin: 0 auto;
