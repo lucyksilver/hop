@@ -74,7 +74,7 @@ p beer_1
 
 
 pub_1 = Pub.create!(name: "The silver octopus", description:"great punk night on thursdays", address:"141 Albert St, Camden Town, London NW1 7NB")
-pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"49 Regent's Park Rd, Primrose Hill, London NW1 8XD")
+pub_2 = Pub.create!(name: "The not sure tavern", description:"don't ask us, we get nervous", address:"84 Commercial St, Spitalfields, London E1 6LY")
 pub_3 = Pub.create!(name: "The racoon saloon", description:"excellent taxidermy", address:"397-400 Geffrye St, London E2 8HZ")
 pub_4 = Pub.create!(name: "The glitter horse", description:"wonderful pub", address:"93 Leonard St, Hackney, London EC2A 4RD")
 p pub_1

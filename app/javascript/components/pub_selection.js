@@ -3,8 +3,7 @@ const pubSelection = () => {
   pubs.forEach((pub) => {
     pub.addEventListener("click", (event) => {
       // event.preventDefault();
-      console.log(event.currentTarget);
-      console.log(event.currentTarget.classList.contains('card-border'));
+
       const otherCard = document.querySelector(".card-border");
       if (otherCard) {
 
