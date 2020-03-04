@@ -1,5 +1,16 @@
-<h1>What's your flavour?</h1>
-<%= simple_form_for :search, url: beers_path, method: :get do |f| %>
-  <%= f.input :tags, as: :check_boxes, collection: @tags %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <h1>What's your flavour?</h1>
+  <%= simple_form_for :search, url: beers_path, method: :get do |f| %>
+    <fieldset class="form-group check_boxes required search_tags">
+    <div class="tags-form-group">
+      <% @tags.each do |tag| %>
+      <div class="tags-form-check" id="tag">
+        <input class="d-none" type="checkbox" value="<%= tag.id %>" name="search[tags][]" id="search_tags_<%= tag.id %>">
+        <label class="tag-form-check-label collection_check_boxes" for="search_tags_1"><%= tag.name %></label>
+      </div>
+      <% end %>
+    </div>
+    </fieldset>
+    <%= f.submit %>
+  <% end %>
+</div>
