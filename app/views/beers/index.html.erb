@@ -10,6 +10,7 @@
         <% beer.tags.each do |tag| %>
           <p><%= tag.name %></p>
         <% end %>
+        <p><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
       </div>
       <% end %>
   </div>

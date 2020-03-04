@@ -6,4 +6,9 @@ class User < ApplicationRecord
   has_many :choices
   has_many :pubs, through: :choices
   has_many :beers, through: :choices
+
+  validates :address, presence: true
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
