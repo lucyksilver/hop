@@ -8,18 +8,30 @@
     <% array_of_pubs = beer.pubs.sample(3) %>
   <% end %>
 
+
+
+
   <fieldset class="form-group radio_buttons optional choice_pub_id">
+    <input type="hidden" name="choice[pub_id]" value="">
 
-
-    <% array_of_pubs.each do |pub| %>
-    <div class="form-check">
-      <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
-      <label class="form-check-label collection_radio_buttons" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
+    <div class='cards-home'>
+      <% array_of_pubs.each do |pub| %>
+      <div class="card-home" id="pub-border">
+        <div class="form-check">
+          <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
+          <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
+        </div>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-
-
   </fieldset>
+
 
   <%= f.submit %>
 <% end %>
+
+
+
+
+
+

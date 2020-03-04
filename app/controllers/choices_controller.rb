@@ -29,6 +29,7 @@ class ChoicesController < ApplicationController
     if @choice.save
       redirect_to choice_path(@choice)
     else
+      raise
       render "beers/show"
     end
   end
