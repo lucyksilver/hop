@@ -1,11 +1,3 @@
-<%= form_tag beers_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    placeholder: "Find a beer"
-  %>
-  <%= submit_tag "Search" %>
-<% end %>
-
 <h1><%= link_to "HOP!", tags_path %></h1>
-
-<%= link_to "Randomise", random_beers_path %>
+<h3><%= link_to "Randomise", random_beers_path %></h3>
+<h3><%= link_to "Search Brews", beers_path %></h3>

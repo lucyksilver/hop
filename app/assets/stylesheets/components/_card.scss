@@ -1,9 +1,3 @@
-.cards-home {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px;
-  cursor: pointer;
-}
 
 .pub-card-home {
   display: grid;
@@ -19,7 +13,6 @@
   }
 }
 
-
 .tag-card-home {
   position: relative;
   width: 100%;
@@ -32,6 +25,13 @@
     right: 0;
     bottom: 0;
   }
+}
+
+.cards-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+  cursor: pointer;
 }
 
 .card-home {
