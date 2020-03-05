@@ -1,3 +1,36 @@
+.beers-header {
+  font-size: 32px;
+}
+
+.beers-search {
+  margin: 0 48px;
+  text-align: center;
+  font-size: 24px;
+  background-color: $gray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.beers-search-bar {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.beers-search-btn {
+  background-color: $base;
+  border: 2px solid $coral;
+  border-radius: 5px;
+  color: $coral;
+  &:hover {
+  background-color: $coral;
+  border: 2px solid $coral;
+  border-radius: 5px;
+  color: $base;
+  }
+}
+
 .beer-cards {
   padding: 48px;
   display: grid;
@@ -10,15 +43,14 @@
   display: flex;
   cursor: pointer;
   position: relative;
-  background-color: #FFFFFF;
+  background-color: rgba(250, 250, 250, 0.5);
   padding: 20px;
   border-radius: 7px;
   text-decoration: none;
   transition: 0.3s;
-  // &:hover {
-  //   opacity: 0.9;
-  //   transform: scale(1.1);
-  // }
+  &:hover {
+  background-color: rgba(250, 250, 250, 1);
+  }
 }
 .text-gray {
   color: $light-gray;

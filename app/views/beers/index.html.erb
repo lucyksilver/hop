@@ -1,13 +1,10 @@
 <div class="container">
-  <h1 class="text-center">Pick your brew</h1>
-  <div class="text-center">
-    <%= form_tag beers_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        placeholder: "Find a beer"
-      %>
-      <%= submit_tag "Search" %>
-    <% end %>
+  <p class="text-center beers-header pt-5">PICK YOUR BREW</hp>
+  <div class="beers-search">
+    <form action="/beers" accept-charset="UTF-8" method="get" style="">
+      <input class="beers-search-bar" type="text" name="query" id="query" placeholder="FIND A BEER">
+      <input class="beers-search-btn" type="submit" name="commit" value="SEARCH" data-disable-with="Search">
+    </form>
   </div>
 
   <div class="beer-cards">
