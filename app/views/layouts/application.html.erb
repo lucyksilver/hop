@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' unless current_page?(root_path) %>
+    <%#= render 'shared/background-div' unless current_page?(root_path) %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
