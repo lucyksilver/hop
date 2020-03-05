@@ -6,18 +6,35 @@
 }
 
 .pub-card-home {
-  width: 100px;
-  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  .form-check-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 
 .tag-card-home {
+  position: relative;
   width: 100%;
   height: 100px;
+  .form-check-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .card-home {
-  position: relative;
   cursor: pointer;
   position: relative;
   background-color: #FFFFFF;
@@ -30,15 +47,7 @@
     opacity: 0.9;
     transform: scale(1.1);
   }
-  .form-check-label {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
+
 }
 
 .card-link {
