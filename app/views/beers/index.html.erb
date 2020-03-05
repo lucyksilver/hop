@@ -27,11 +27,11 @@
       </div>
       <% end %>
   </div>
-
-  <div>
+  <div class="text-center pb-5">
     <% if @beers.count < Beer.all.count %>
-      <%= link_to "View all", beers_path, class: "btn-dark" %>
+      <%= link_to "VIEW ALL", beers_path, class: "beers-btn" %>
     <% end %>
   </div>
+
 
 </div>
