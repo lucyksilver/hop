@@ -50,38 +50,6 @@
 }
 
 
-.home-search {
-  padding: 15px;
-  margin: 10px;
-  background-color: $base;
-  text-decoration: none;
-  color: $coral;
-  border: 3px solid $coral;
-  padding: 5px;
-  transition: 0.3s;
-  &:hover {
-    color: $gray;
-    text-decoration: none;
-    border:none;
-  }
-}
-
-.home-random {
-  border: 1px $gray solid;
-  padding: 7px;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  transition: 0.4s;
-  text-decoration: none;
-  color: $gray;
-  transition: 0.3s;
-  &:hover {
-    background-color: $gray;
-    color: $coral;
-    text-decoration: none;
-    border: 1px solid $coral;
-  }
-}
 
 
 
