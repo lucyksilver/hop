@@ -1,5 +1,5 @@
-<div class="container">
-  <h1 class="text-center">What's your flavour?</h1>
+<div class="tags-container">
+  <h1 class="tags-header mb-5">What's your flavour?</h1>
   <%= simple_form_for :search, url: beers_path, method: :get do |f| %>
     <fieldset class="form-group check_boxes required search_tags">
       <input type="hidden" name="search[tags][]" value="">
@@ -12,6 +12,8 @@
       <% end %>
       </div>
     </fieldset>
-    <%= f.submit %>
+    <div class="tag-btn mt-5">
+      <%= f.submit %>
+    </div>
   <% end %>
 </div>

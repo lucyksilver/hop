@@ -1,6 +1,19 @@
+.tags-container {
+  padding: 50px;
+  margin: 50px 100px;
+  background-color: $base;
+}
+
+.tags-header {
+  text-align: center;
+  color: $base;
+  background-color: $gray;
+  border-radius: 4px;
+}
+
 .tags-form-group {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
 
 }
@@ -30,4 +43,9 @@
 .tag-card .form-check-label {
   text-align: center;
   padding-top: 10px;
+}
+
+.tag-btn {
+  display: flex;
+  justify-content: center;
 }
