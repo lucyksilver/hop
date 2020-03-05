@@ -5,6 +5,7 @@
 }
 
 .tags-header {
+  font-size: 32px;
   text-align: center;
   color: $base;
   background-color: $gray;
@@ -45,7 +46,44 @@
   padding-top: 10px;
 }
 
-.tag-btn {
+.tag-btn-container {
+  position: relative;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin: 0 auto;
+  span {
+    width: 64px;
+    height: 64px;
+    background-color: $base;
+    transform: rotate(45deg);
+  }
+  .left-square {
+    position: absolute;
+    left: -45px;
+  }
+  .right-square {
+    position: absolute;
+    right: -45px;
+  }
+}
+
+.tag-btn {
+  padding: 12px 80px;
+  color: $base;
+  font-size: 24px;
+  background-color: $gray;
+  width: 100%;
+  margin: 16px 0;
+  transition-duration: 0.3s;
+  &:hover {
+    text-decoration: none;
+    color: $gray;
+    background-color: $coral;
+  }
+  &:after {
+    width: 64px;
+    height: 64px;
+    background-color: blue;
+  }
 }
