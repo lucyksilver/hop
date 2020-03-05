@@ -7,16 +7,17 @@
         <div class= "random-image">
           <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "random-card-img" %>
         </div>
-          <div class="random-card-content">
-
-              <p><%= beer.name%></p>
-              <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
-              <% beer.tags.each do |tag| %>
-                <span class="beer-tag beer-active-tag"><%= tag.name %></span>
-              <% end %>
-          </div>
+        <div class="random-card-content">
+          <p><%= beer.name%></p>
+          <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+          <% beer.tags.each do |tag| %>
+            <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+          <% end %>
         </div>
-      <% end %>
-      <%= link_to "RANDOMISE!", random_beers_path, class: "tag-btn" %>
+        </div>
+          <% end %>
+    </div>
+    <div class="text-center">
+      <%= link_to "RANDOMISE!", random_beers_path, class: "beers-btn" %>
     </div>
 </div>
