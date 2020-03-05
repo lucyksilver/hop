@@ -1,8 +1,28 @@
-<h1><%= link_to "HOP!", tags_path %></h1>
+
+
+<div class="container-hop">
+  <div class="top-box text-center">
+    <div class="home-nav d-flex justify-content-around align-items-center">
+      <h4>SINCE</h4>
+      <%= image_tag "logo.svg", class: 'hop-logo' %>
+      <h4>2020</h4>
+    </div>
+
+    <h1 class="box-shadow">HOP!</h1>
+    <h2>FIND LOCAL BEER</h2>
+    <h2 class= "hop-it"><%= link_to "HOP IT!", tags_path %></h2>
+    <h5><%= link_to "CHOOSE A RANDOM BEER", random_beers_path %></h5>
+  </div>
+
+  <div class="bottom-box text-center">
+    <h4>DON'T KNOW WHAT YOU WANT?</h4>
+    <h3 class="home-search"><%= link_to "SEARCH 300 BREWS", beers_path %></h3>
+  </div>
 
 
 
-<%= image_tag "logo.svg" %>
 
-<h3><%= link_to "Randomise", random_beers_path %></h3>
-<h3><%= link_to "Search Brews", beers_path %></h3>
+
+
+
+</div>
