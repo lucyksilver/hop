@@ -13,21 +13,25 @@
 
 .beers-search-bar {
   width: 80%;
-  background-color: transparent;
+  background-color: transparent !important;
   border: none;
   outline: none;
 }
 
+input {
+  color: $coral;
+}
+
 .beers-search-btn {
-  background-color: $base;
+  padding: 0 25px;
+  background-color: $gray;
   border: 2px solid $coral;
   border-radius: 5px;
   color: $coral;
   &:hover {
   background-color: $coral;
-  border: 2px solid $coral;
   border-radius: 5px;
-  color: $base;
+  color: $gray;
   }
 }
 
@@ -105,4 +109,16 @@
   }
 }
 
-
+.beers-btn {
+  font-size: 24px;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: $gray;
+  color: $coral;
+  &:hover {
+    background-color: $coral;
+    color: $gray;
+    text-decoration: none;
+  }
+}
