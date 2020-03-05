@@ -24,7 +24,7 @@ class BeersController < ApplicationController
   end
 
   def random
-    @beers = Beer.all.sample(2)
+    @beers = Beer.all.sample(3)
   end
 
 end
