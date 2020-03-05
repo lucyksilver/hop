@@ -19,7 +19,6 @@
         <div class="beer-card-content">
           <div class="beer-card-title">
             <p><%= choice.beer.name%></p>
-            <p class="text-gray"><%= (choice.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
           </div>
           <div class="beer-card-tags">
             <% choice.beer.tags.each do |tag| %>
@@ -39,7 +38,6 @@
             <div class="beer-card-content">
               <div class="beer-card-title">
                 <p><%= choice.beer.name%></p>
-                <p class="text-gray"><%= (choice.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
               </div>
               <div class="beer-card-tags">
                 <% choice.beer.tags.each do |tag| %>
@@ -74,7 +72,6 @@
         <div class="beer-card-content">
           <div class="beer-card-title">
             <p><%= like.beer.name%></p>
-            <p class="text-gray"><%= (like.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
           </div>
           <div class="beer-card-tags">
             <% like.beer.tags.each do |tag| %>
@@ -94,7 +91,6 @@
             <div class="beer-card-content">
               <div class="beer-card-title">
                 <p><%= like.beer.name%></p>
-                <p class="text-gray"><%= (like.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
               </div>
               <div class="beer-card-tags">
                 <% like.beer.tags.each do |tag| %>
