@@ -41,6 +41,7 @@
 .bottom-box h4 {
   color: $base;
   font-family: $body-font;
+  margin-bottom: 18px;
 }
 
 .box-shadow {
@@ -51,17 +52,17 @@
 
 .home-search {
   padding: 15px;
+  margin: 10px;
   background-color: $base;
-}
-
-.home-search a {
   text-decoration: none;
   color: $coral;
-  border: 5px solid $coral;
+  border: 3px solid $coral;
   padding: 5px;
+  transition: 0.3s;
   &:hover {
     color: $gray;
-    border: 5px solid $gray;
+    text-decoration: none;
+    border:none;
   }
 }
 
@@ -73,6 +74,7 @@
   transition: 0.4s;
   text-decoration: none;
   color: $gray;
+  transition: 0.3s;
   &:hover {
     background-color: $gray;
     color: $coral;

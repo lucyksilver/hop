@@ -4,7 +4,7 @@
   font-size: 30px;
   background-color: $gray;
   width: 100%;
-  margin: 16px 0;
+  margin: 16px 0 24px 0;
   transition-duration: 0.3s;
   &:hover {
     text-decoration: none;
@@ -39,6 +39,7 @@
     right: -45px;
   }
 }
+
 
 
 .random-btn {
