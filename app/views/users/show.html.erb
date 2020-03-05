@@ -1,19 +1,112 @@
 
 <h1><%= @user.username %></h1>
 
-<div class="cards-home">
-  <% @user.choices.each do |choice| %>
 
-    <div class="card-home">
-        <!-- filter above card done in card.scss -->
-      <%= link_to "", choice_path(choice), class: "card-link" %>
-      <div class="card-home-image" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')"></div>
-      <div class="card-content">
-        <p><%= choice.beer.name %></p>
-        <p><%= choice.pub.name %></p>
+<div class="user-choices">
+  <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
+    <h2>Brews you've enjoyed!</h2>
+    <% if @user.choices.count > 2 %>
+      <a class="" data-toggle="collapse" href="#collapseChoices" role="button" aria-expanded="false" aria-controls="collapseChoices">
+      View All Choices
+      </a>
+    <% end %>
+  </div>
+  <div class="beer-cards">
+    <% @first_two.each do |choice| %>
+      <div class="beer-card">
+        <%= link_to "", choice_path(choice), class: "beer-card-link" %>
+        <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
+        <div class="beer-card-content">
+          <div class="beer-card-title">
+            <p><%= choice.beer.name%></p>
+            <p class="text-gray"><%= (choice.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+          </div>
+          <div class="beer-card-tags">
+            <% choice.beer.tags.each do |tag| %>
+              <!-- logic to do later (Arthur) -->
+              <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+            <% end %>
+          </div>
+        </div>
       </div>
+    <% end %>
+    <div class="collapse" id="collapseChoices">
+      <% if @user.likes.count > 2 %>
+        <% @remainder.each do |choice| %>
+          <div class="beer-card">
+            <%= link_to "", choice_path(choice), class: "beer-card-link" %>
+            <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
+            <div class="beer-card-content">
+              <div class="beer-card-title">
+                <p><%= choice.beer.name%></p>
+                <p class="text-gray"><%= (choice.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+              </div>
+              <div class="beer-card-tags">
+                <% choice.beer.tags.each do |tag| %>
+                  <!-- logic to do later (Arthur) -->
+                  <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
-
-  <% end %>
+  </div>
 </div>
 
+
+
+<div class="user-likes">
+  <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
+    <h2>Brews you've liked!</h2>
+    <% if @user.likes.count > 2 %>
+      <a class="" data-toggle="collapse" href="#collapseLikes" role="button" aria-expanded="false" aria-controls="collapseLikes">
+      View All Likes
+      </a>
+    <% end %>
+  </div>
+  <div class="beer-cards">
+    <% @first_two_likes.each do |like| %>
+      <div class="beer-card">
+        <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>
+        <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
+        <div class="beer-card-content">
+          <div class="beer-card-title">
+            <p><%= like.beer.name%></p>
+            <p class="text-gray"><%= (like.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+          </div>
+          <div class="beer-card-tags">
+            <% like.beer.tags.each do |tag| %>
+              <!-- logic to do later (Arthur) -->
+              <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="collapse" id="collapseLikes">
+      <% if @user.likes.count > 2 %>
+        <% @remainder_likes.each do |like| %>
+          <div class="beer-card">
+            <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>
+            <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
+            <div class="beer-card-content">
+              <div class="beer-card-title">
+                <p><%= like.beer.name%></p>
+                <p class="text-gray"><%= (like.beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+              </div>
+              <div class="beer-card-tags">
+                <% like.beer.tags.each do |tag| %>
+                  <!-- logic to do later (Arthur) -->
+                  <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
