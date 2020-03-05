@@ -1,8 +1,51 @@
+.tags-container {
+  padding: 50px;
+  margin: 50px 100px;
+  background-color: $base;
+}
+
+.tags-header {
+  text-align: center;
+  color: $base;
+  background-color: $gray;
+  border-radius: 4px;
+}
+
 .tags-form-group {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 25px;
 
 }
 
+.tag-active {
+  background-color: $coral;
+  color: #FFFFFF !important;
+}
 
+.tag-card {
+  color: $coral;
+  border: 2px solid $coral;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  .form-check-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.tag-card .form-check-label {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.tag-btn {
+  display: flex;
+  justify-content: center;
+}
