@@ -1,10 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url("https://use.typekit.net/avq0rdk.css");
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// @import url("https://use.typekit.net/avq0rdk.css");
+@import url('https://fonts.googleapis.com/css?family=Alegreya:800|Fjalla+One&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Normal", "Karmina", "serif";
-$headers-font: "Normal", "Karmina", "serif";
+$body-font: 'Fjalla One', sans-serif;
+$headers-font: 'Alegreya', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

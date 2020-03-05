@@ -1,23 +1,31 @@
 <div class="container">
   <h1>Pick your brew</h1>
-  <p>We have <%= pluralize @beers.count, "beer" %> matching your search</p>
+
+   <%= form_tag beers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      placeholder: "Find a beer"
+    %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
   <div class="cards-home">
-      <% @beers.each do |beer| %>
+    <% @beers.each do |beer| %>
       <div class="card-home">
         <%= link_to "", beer_path(beer), class: "card-link" %>
         <div class="card-home-image" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')"></div>
-        <p><%= beer.name%></p>
-            <% if beer.liked_by(current_user) %>
+          <% if beer.liked_by(current_user) %>
             <%= link_to "unlike", like_path(beer.likes.find_by(user: current_user), page: :index), method: :delete, class: "like-card-link" %>
-            <% else %>
-              <%= link_to "like",beer_likes_path(beer, page: :index), method: :post, class: "like-card-link" %>
-            <% end %>
-        <% beer.tags.each do |tag| %>
-          <p><%= tag.name %></p>
-        <% end %>
-        <p><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+          <% else %>
+            <%= link_to "like",beer_likes_path(beer, page: :index), method: :post, class: "like-card-link" %>
+          <% end %>
+          <p><%= beer.name%></p>
+          <% beer.tags.each do |tag| %>
+            <p><%= tag.name %></p>
+          <% end %>
+          <p><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
       </div>
-      <% end %>
+    <% end %>
   </div>
 
   <div>
