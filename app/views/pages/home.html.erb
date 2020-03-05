@@ -10,19 +10,16 @@
 
     <h1 class="box-shadow">HOP!</h1>
     <h2>FIND LOCAL BEER</h2>
-    <h2 class= "hop-it"><%= link_to "HOP IT!", tags_path %></h2>
-    <h5><%= link_to "CHOOSE A RANDOM BEER", random_beers_path %></h5>
+    <div class="hop-it-btn-container">
+      <span class="left-square"></span>
+      <%= link_to "HOP IT!", tags_path, class: "hop-it-btn" %>
+      <span class="right-square"></span>
+    </div>
+    <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-random" %>
   </div>
 
   <div class="bottom-box text-center">
-    <h4>LOOKING FOR A PARTICULAR BEER?</h4>
+    <h4>HAVE A BREW IN MIND?</h4>
     <h3 class="home-search"><%= link_to "SEARCH 300 BREWS", beers_path %></h3>
   </div>
-
-
-
-
-
-
-
 </div>
