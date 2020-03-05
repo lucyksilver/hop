@@ -1,1 +1,84 @@
 // Specific CSS for your home-page
+.container-hop {
+  width: 600px;
+  margin: 0 auto;
+
+}
+
+.home-nav h4 {
+  font-family: $body-font;
+}
+
+.hop-logo {
+  width: 120px;
+}
+
+.top-box {
+  background-color:$base;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.top-box h2, h3, h5{
+  font-family: $body-font;
+}
+
+.top-box h5 a {
+  text-decoration: none;
+  color: $gray;
+  &:hover {
+    color: $coral;
+  }
+}
+
+.bottom-box {
+  margin-top: 30px;
+  padding: 20px 30px;
+  background-color: $gray;
+  border-radius: 10px;
+}
+
+.bottom-box h4 {
+  color: $base;
+  font-family: $body-font;
+}
+
+.hop-it {
+  padding: 20px;
+  background-color: $gray;
+}
+
+.hop-it a {
+  text-decoration: none;
+  color: $base;
+  &:hover {
+    color: $coral;
+  }
+}
+
+.box-shadow {
+  text-shadow: 5px 3px 0px #F9827B;
+  font-size: 110px;
+}
+
+.home-search {
+  padding: 15px;
+  background-color: $base;
+}
+
+.home-search a {
+  text-decoration: none;
+  color: $coral;
+  border: 5px solid $coral;
+  padding: 5px;
+  &:hover {
+    color: $gray;
+    border: 5px solid $gray;
+  }
+}
+
+
+
+
+
+
