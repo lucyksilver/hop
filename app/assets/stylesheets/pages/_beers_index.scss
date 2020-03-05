@@ -24,18 +24,24 @@
   color: $light-gray;
 }
 
+.beer-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .beer-tag {
   border: 2px solid $coral;
-  padding: 5px 15px;
+  padding: 8px 16px;
   border-radius: 4px;
   color: $coral;
   font-size: 14px;
+  margin-right: 4px;
 }
 
 
 .beer-active-tag {
   background-color: $coral;
-  padding: 5px 15px;
+  padding: 8px 16px;
   border-radius: 4px;
   color: white;
   font-size: 14px;
@@ -56,7 +62,7 @@
 }
 
 .beer-card-content {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
   justify-content: between;
   flex-direction: column;
@@ -66,19 +72,6 @@
   p {
     margin: 0;
   }
-  .content {
-    width: 80%;
-  }
-  .tags {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-  }
 }
 
-.tags p {
-  background-color: $coral;
-  padding: 5px 15px;
-  border-radius: 5px;
-}
 
