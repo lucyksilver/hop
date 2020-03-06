@@ -106,6 +106,14 @@
   font-size: 24px;
 }
 
+.pub-card-title p {
+  margin: 0 !important;
+}
+
+.pub-distance {
+  color: $light-gray;
+}
+
 .show-all {
   text-decoration: none;
   color: $coral;
