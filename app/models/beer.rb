@@ -5,6 +5,7 @@ class Beer < ApplicationRecord
   has_many :likes
   has_many :tags, through: :beer_tags
   has_many :pubs, through: :pub_beers
+  has_one_attached :photo
 
   include PgSearch::Model
   pg_search_scope :search_by_name,
@@ -14,9 +15,16 @@ class Beer < ApplicationRecord
     }
 
   def closest_distance(user)
-    pubs.map do |pub|
+    return 0 if pubs.empty?
+    distances = pubs.geocoded.map do |pub|
       Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[user.latitude, user.longitude])
-    end.min
+    end
+
+    if distances
+      return distances.min
+    else
+      return 0
+    end
   end
 
   def liked_by(user)
