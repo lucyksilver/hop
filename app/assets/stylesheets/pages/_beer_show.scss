@@ -1,5 +1,5 @@
 body {
-  background-color: $coral;
+  background-color: $base;
 }
 
 .container {
@@ -39,21 +39,26 @@ body {
   font-size: 32px;
 }
 
+.fa-heart {
+  color: $coral;
+}
+
 .show-tag {
-  border: 2px solid $gray;
+  border: 2px solid $coral;
+  background-color: $gray;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $gray;
+  color: $coral;
   font-size: 14px;
   margin-right: 4px;
 }
 
 .show-tag-active {
-  border: 2px solid $gray;
-  background-color: $gray;
+  border: 2px solid $coral;
+  background-color: $coral;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $coral;
+  color: $gray;
   font-size: 14px;
   margin-right: 4px;
 }
@@ -70,11 +75,11 @@ body {
 
 .show-all {
   text-decoration: none;
-  color: $gray;
+  color: $coral;
   opacity: 0.5;
   &:hover {
     text-decoration: none;
-    color: $gray;
+    color: $coral;
     opacity: 1;
   }
 }
@@ -87,7 +92,7 @@ body {
   color: $coral;
   &:hover {
     background-color: $coral;
-    border: 2px solid $gray;
+    border: 2px solid $coral;
     color: $gray;
     text-decoration: none;
   }

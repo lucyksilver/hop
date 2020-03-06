@@ -14,9 +14,12 @@
         <div class= "pub-card-image">
           <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "pub-img" %>
         </div>
-        <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
-        <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
-        <span><%= (Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away </span>
+        <div class="p-2 text-center">
+          <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
+          <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
+          <span><%= (Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away </span>
+
+        </div>
       </div>
       <% end %>
     </div>
