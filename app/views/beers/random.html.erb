@@ -1,21 +1,19 @@
 <div class="random-container text-center">
-  <h2 class= "text-center beer-header">CHOOSE A RANDOM BEER!</h2>
+  <h2 class= "text-center beer-header" id="randomBeer" data-actual-beer="<%= @random_beer.name %>" data-beers="<%= @beers.map { |beer| beer.name } %>"></h2>
     <div class="random-cards text-center">
-    <% @beers.each do |beer| %>
-      <div class="random-card">
-        <%= link_to "", beer_path(beer), class: "beer-card-link" %>
-        <div class= "random-image">
+      <div class="random-card d-none fadeIn" id="card">
+        <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
+        <div class= "random-image" >
           <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "random-card-img" %>
         </div>
         <div class="random-card-content">
-          <p><%= beer.name%></p>
-          <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
-          <% beer.tags.each do |tag| %>
+          <p><%= @random_beer.name%></p>
+          <p class="text-gray"><%= (@random_beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+          <% @random_beer.tags.each do |tag| %>
             <span class="beer-tag beer-active-tag"><%= tag.name %></span>
           <% end %>
         </div>
-        </div>
-          <% end %>
+      </div>
     </div>
     <div class="text-center">
       <%= link_to "RANDOMISE!", random_beers_path, class: "beers-btn" %>
