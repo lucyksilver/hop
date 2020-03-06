@@ -1,34 +1,34 @@
-
 <div class="beer-show-container">
   <div class="beer-left-half" style="background-image: url('https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
   </div>
 
   <div class="beer-right-half">
       <div class="content">
-        <h1><%= @beer.name %></h1>
-        <p>Beer description: <%= @beer.description %></p>
-
-        <p>Beer tags:
-          <% @beer.tags.each do |tag| %>
-          <%= tag.name %>
-          <% end %></p>
-
-
-          <div class="choice-form">
-            <h2>Choose your pub</h2>
-            <%= render "choices/form", choice: @choice, beer: @beer %>
-            <%= link_to "View all", beer_path(@beer, view_all: true) %>
-
-            <br>
-
-            <% if @beer.liked_by(current_user) %>
-             <%= link_to "Unlike", like_path(@beer.likes.find_by(user: current_user)), method: :delete %>
-            <% else %>
-              <%= link_to "like",beer_likes_path(@beer), method: :post %>
+        <div class="beer-info">
+          <p><%= @beer.name %></p>
+          <% if @beer.liked_by(current_user) %>
+            <%= link_to like_path(@beer.likes.find_by(user: current_user)), method: :delete, class: "liked" do %>
+            <i class="fas fa-heart ml-3"></i>
+            <% end %>
+          <% else %>
+            <%= link_to beer_likes_path(@beer), method: :post, class: "like" do%>
+            <i class="far fa-heart ml-3"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="mt-2 mb-4">
+          <p><%= @beer.description %></p>
+          <div class="beer-card-tags">
+            <% @beer.tags.each do |tag| %>
+            <!-- add logic to active (Vanda) -->
+              <span class="show-tag-active"><%= tag.name %></span>
             <% end %>
           </div>
+        </div>
+        <div class="choice-form">
+          <p class="font-heading">Choose your pub</p>
+          <%= render "choices/form", choice: @choice, beer: @beer %>
+        </div>
       </div>
   </div>
-
 </div>
-
