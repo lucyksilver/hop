@@ -1,7 +1,3 @@
-body {
-  background-color: $base;
-}
-
 .container {
   background-color: $base;
 }
@@ -18,6 +14,7 @@ body {
 }
 
 .beer-right-half {
+  background-color: $base;
   position: relative;
   width: 50vw;
   height: 100vh;
