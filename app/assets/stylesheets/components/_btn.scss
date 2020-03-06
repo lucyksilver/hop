@@ -63,12 +63,30 @@
   text-decoration: none;
   color: $coral;
   border: 3px solid $coral;
+  border-radius: 3px;
   padding: 5px;
   transition: 0.3s;
   &:hover {
     color: $gray;
     text-decoration: none;
-    border:none;
+    border: 3px solid transparent;
+  }
+}
+
+.home-search-btn-1 {
+  padding: 15px;
+  margin: 10px;
+  background-color: $base;
+  text-decoration: none;
+  color: $coral;
+  border: 3px solid $base;
+  border-radius: 3px;
+  padding: 5px;
+  transition: 0.3s;
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+    border: 3px solid transparent;
   }
 }
 
