@@ -4,6 +4,11 @@
   transition-delay: 1s;
 }
 
+.random-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .random-cards {
   padding: 20px;
   display: grid;
