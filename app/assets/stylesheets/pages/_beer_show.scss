@@ -63,8 +63,45 @@ body {
   margin-right: 4px;
 }
 
+
+.pub-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+  background-color: rgba(250, 250, 250, 0.7);
+  border-radius: 5px;
+}
+
+.pub-card {
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  .form-check-label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pub-card-image {
+    transition: .3s;
+    padding: 6px;
+    margin-bottom: 16px;
+  }
+}
+
+.pub-card-active {
+  .pub-card-image {
+    border: 3px solid $coral;
+    border-radius: 8px;
+    padding: 3px;
+  }
+}
+
 .pub-img {
-  width: 100px;
+  width: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -90,10 +127,10 @@ body {
   background-color: $gray;
   border-radius: 5px;
   color: $coral;
+  opacity: 0.8;
   &:hover {
-    background-color: $coral;
-    border: 2px solid $coral;
-    color: $gray;
+    opacity: 1;
     text-decoration: none;
   }
 }
+

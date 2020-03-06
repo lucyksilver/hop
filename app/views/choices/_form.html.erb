@@ -7,22 +7,19 @@
 
   <fieldset class="form-group radio_buttons optional choice_pub_id">
     <input type="hidden" name="choice[pub_id]" value="">
-
-    <div class='pub-cards'>
-      <% array_of_pubs.each do |pub| %>
-      <div class="pub-card" id="pub-border">
-        <div class= "pub-card-image">
-          <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "pub-img" %>
-        </div>
-        <div class="p-2 text-center">
+      <div class='pub-cards'>
+        <% array_of_pubs.each do |pub| %>
+        <div class="pub-card" id="pub-border">
+          <div class= "pub-card-image">
+            <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "pub-img" %>
+          </div>
           <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
-          <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"><%= pub.name %></label>
+          <label class="form-check-label collection_radio_buttons click-hand" for="choice_pub_id_<%= pub.id %>"></label>
+          <p><%= pub.name %></p>
           <span><%= (Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away </span>
-
         </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
   </fieldset>
   <div class="text-center">
     <%= link_to "View all", beer_path(@beer, view_all: true), class: "show-all" %>
