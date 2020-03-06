@@ -33,5 +33,62 @@ body {
   }
 }
 
+.beer-info {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 32px;
+}
 
+.show-tag {
+  border: 2px solid $gray;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: $gray;
+  font-size: 14px;
+  margin-right: 4px;
+}
 
+.show-tag-active {
+  border: 2px solid $gray;
+  background-color: $gray;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: $coral;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.pub-img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.font-heading {
+  font-size: 24px;
+}
+
+.show-all {
+  text-decoration: none;
+  color: $gray;
+  opacity: 0.5;
+  &:hover {
+    text-decoration: none;
+    color: $gray;
+    opacity: 1;
+  }
+}
+
+.show-btn {
+  padding: 10px 50px;
+  border: 2px solid $gray;
+  background-color: $gray;
+  border-radius: 5px;
+  color: $coral;
+  &:hover {
+    background-color: $coral;
+    border: 2px solid $gray;
+    color: $gray;
+    text-decoration: none;
+  }
+}

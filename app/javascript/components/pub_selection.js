@@ -1,15 +1,15 @@
 const pubSelection = () => {
-  const pubs = document.querySelectorAll("#new_choice .card-home .form-check-label");
+  const pubs = document.querySelectorAll("#new_choice .pub-card .form-check-label");
   pubs.forEach((pub) => {
     pub.addEventListener("click", (event) => {
       // event.preventDefault();
 
-      const otherCard = document.querySelector(".card-border");
+      const otherCard = document.querySelector(".pub-card-active");
       if (otherCard) {
 
-        otherCard.classList.remove("card-border");
+        otherCard.classList.remove("pub-card-active");
       }
-      event.currentTarget.parentNode.classList.toggle('card-border');
+      event.currentTarget.parentNode.classList.toggle('pub-card-active');
     });
   });
 };
