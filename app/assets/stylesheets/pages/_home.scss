@@ -1,10 +1,20 @@
 // Specific CSS for your home-page
+body {
+  background-color: $coral;
+}
+
 .container-hop {
   width: 600px;
   margin: 20px auto;
+  position: relative;
 
 }
 
+.log-in-btn-homepage {
+  position: absolute;
+  right: 0px;
+  top: 25px;
+}
 .home-nav h4 {
   font-family: $body-font;
 }
