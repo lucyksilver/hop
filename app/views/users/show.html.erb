@@ -1,6 +1,8 @@
 
 <h1><%= @user.username %></h1>
-
+ <% if @user.avatar.attached? %>
+        <%= cl_image_tag @user.avatar.key, crop: :fill, class: "about-me-avatar" %>
+    <% end %>
 
 <div class="user-choices">
   <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
