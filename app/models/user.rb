@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :likes
   has_many :pubs, through: :choices
   has_many :beers, through: :choices
+  has_one_attached :avatar
 
   validates :address, presence: true
 

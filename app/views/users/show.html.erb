@@ -1,18 +1,20 @@
 
 <h1><%= @user.username %></h1>
-
+ <% if @user.avatar.attached? %>
+        <%= cl_image_tag @user.avatar.key, crop: :fill, class: "about-me-avatar" %>
+    <% end %>
 
 <div class="user-choices">
   <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
     <h2>Brews you've enjoyed!</h2>
-    <% if @user.choices.count > 2 %>
+    <% if @user.choices.count > 3 %>
       <a class="home-random-btn" data-toggle="collapse" href="#collapseChoices" role="button" aria-expanded="false" aria-controls="collapseChoices">
       View All Choices
       </a>
     <% end %>
   </div>
-  <div class="beer-cards">
-    <% @first_two.each do |choice| %>
+  <div class="beer-cards-index">
+    <% @first_three.each do |choice| %>
       <div class="beer-card">
         <%= link_to "", choice_path(choice), class: "beer-card-link" %>
         <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
@@ -30,7 +32,7 @@
       </div>
     <% end %>
 
-      <% if @user.choices.count > 2 %>
+      <% if @user.choices.count > 3 %>
         <% @remainder.each do |choice| %>
           <div class="collapse beer-card" id="collapseChoices">
             <%= link_to "", choice_path(choice), class: "beer-card-link" %>
@@ -57,14 +59,14 @@
 <div class="user-likes">
   <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
     <h2>Brews you've liked!</h2>
-    <% if @user.likes.count > 2 %>
-      <a class="" data-toggle="collapse" href="#collapseLikes" role="button" aria-expanded="false" aria-controls="collapseLikes">
+    <% if @user.likes.count > 3 %>
+      <a class="home-random-btn" data-toggle="collapse" href="#collapseLikes" role="button" aria-expanded="false" aria-controls="collapseLikes">
       View All Likes
       </a>
     <% end %>
   </div>
-  <div class="beer-cards">
-    <% @first_two_likes.each do |like| %>
+  <div class="beer-cards-index">
+    <% @first_three_likes.each do |like| %>
       <div class="beer-card">
         <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>
         <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
@@ -82,7 +84,7 @@
       </div>
     <% end %>
 <!--     <div > -->
-      <% if @user.likes.count > 2 %>
+      <% if @user.likes.count > 3 %>
         <% @remainder_likes.each do |like| %>
           <div class="collapse beer-card" id="collapseLikes">
             <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>

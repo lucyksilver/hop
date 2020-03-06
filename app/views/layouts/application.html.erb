@@ -12,11 +12,17 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless current_page?(root_path) %>
     <%#= render 'shared/background-div' unless current_page?(root_path) %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
+   <% unless current_page?(root_path) || controller_name == 'beers' && action_name == 'show' || controller_name == 'choices' && action_name == 'show' %>
+      <div class="all-page-background">
+    <% else %>
+      <div>
+    <% end %>
+      <%= render 'shared/navbar' unless current_page?(root_path) || controller_name == 'beers' && action_name == 'show' || controller_name == 'choices' && action_name == 'show'%>
+      <%= render 'shared/alternative_navbar' if controller_name == 'beers' && action_name == 'show' || controller_name == 'choices' && action_name == 'show' %>
+      <%= yield %>
+      <%= render 'shared/flashes' %>
+      </div>
 
     <script> </script>
   </body>
