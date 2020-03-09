@@ -30,7 +30,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   pubSelection();
   tagSelection();
-ScrollReveal().reveal('.scroll-reveal', {
+  ScrollReveal().reveal('.scroll-reveal', {
   delay: 150,
   // origin: 'top',
   distance: '-30px',
@@ -42,7 +42,7 @@ ScrollReveal().reveal('.scroll-reveal', {
   //       left: 0,
   //   },
 });
-ScrollReveal().reveal('.scroll-reveal-tag', {
+  ScrollReveal().reveal('.scroll-reveal-tag', {
   delay: 50,
   // origin: 'top',
   distance: '-30px',
