@@ -14,6 +14,7 @@ BeerTag.destroy_all
 PubBeer.destroy_all
 Tag.destroy_all
 Pub.destroy_all
+Like.destroy_all
 User.destroy_all
 Beer.destroy_all
 
@@ -21,7 +22,7 @@ user = User.create!(email: "test1@test.com", password:"123123", username: "test"
 p user
 
 fruity = Tag.create!(name: "Fruity", description: "Fruit has been added to the brew to create interesting, floral flavours")
-rich = Tag.create!(name: "rich", description: "Dark malty flavours")
+rich = Tag.create!(name: "Rich", description: "Dark malty flavours")
 sweet = Tag.create!(name: "Sweet", description: "sweet")
 bitter = Tag.create!(name: "Bitter", description: "bitter")
 fresh = Tag.create!(name: "Fresh", description: "fresh")
@@ -39,9 +40,11 @@ medium = Tag.create!(name: "Medium", description: "medium")
 strong = Tag.create!(name: "Strong", description: "strong")
 
 lager = Tag.create!(name: "Lager", description: "larger")
+pilsner = Tag.create!(name: "Pilsner", description: "pilsner")
 ale = Tag.create!(name: "Ale", description: "ale")
 stout = Tag.create!(name: "Stout", description: "stout")
 wheat_beer = Tag.create!(name: "Wheat Beer", description: "Wheat")
+
 p wheat_beer
 
 file_b1 = URI.open('https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
@@ -166,7 +169,14 @@ pb13 = PubBeer.create!(pub_id: pub_1.id, beer_id: beer_5.id)
 pb14 = PubBeer.create!(pub_id: pub_2.id, beer_id: beer_5.id)
 pb15 = PubBeer.create!(pub_id: pub_3.id, beer_id: beer_5.id)
 pb16 = PubBeer.create!(pub_id: pub_4.id, beer_id: beer_1.id)
-
+pb17 = PubBeer.create!(pub_id: pub_4.id, beer_id: beer_6.id)
+pb18 = PubBeer.create!(pub_id: pub_1.id, beer_id: beer_7.id)
+pb19 = PubBeer.create!(pub_id: pub_2.id, beer_id: beer_8.id)
+pb20 = PubBeer.create!(pub_id: pub_1.id, beer_id: beer_9.id)
+pb21 = PubBeer.create!(pub_id: pub_3.id, beer_id: beer_10.id)
+pb22 = PubBeer.create!(pub_id: pub_3.id, beer_id: beer_7.id)
+pb23 = PubBeer.create!(pub_id: pub_1.id, beer_id: beer_10.id)
+pb24 = PubBeer.create!(pub_id: pub_4.id, beer_id: beer_9.id)
 
 choice_1 = Choice.create!(user: user, pub: pub_1, beer: beer_1)
 choice_1 = Choice.create!(user: user, pub: pub_2, beer: beer_4)

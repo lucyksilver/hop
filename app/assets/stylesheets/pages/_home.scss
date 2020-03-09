@@ -3,9 +3,16 @@ body {
   background-color: $coral;
 }
 
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container-hop {
   width: 600px;
-  margin: 20px auto;
+  margin: 0px auto;
   position: relative;
 
 }
