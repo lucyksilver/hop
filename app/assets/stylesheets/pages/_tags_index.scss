@@ -1,5 +1,5 @@
 .tags-container {
-  padding: 50px;
+  padding: 48px;
   background-color: $base;
   border-radius: 5px;
 }
@@ -15,7 +15,7 @@
 .tags-form-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 25px;
+  grid-gap: 32px;
 
 }
 
@@ -74,7 +74,6 @@
   font-size: 24px;
   background-color: $gray;
   width: 100%;
-  margin: 16px 0;
   transition-duration: 0.3s;
   &:hover {
     text-decoration: none;
