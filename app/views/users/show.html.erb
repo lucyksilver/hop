@@ -1,15 +1,6 @@
-<div class="profile-container m-3">
+<div class="profile-container m-5">
 
-  <div class="profile-left pl-3 pr-3">
-    <% if @user.avatar.attached? %>
-      <%= cl_image_tag @user.avatar.key, height: 150, width: 150, crop: :fill, class: "user-avatar" %>
-    <% else %>
-      <%= image_tag "logo.png",height: 150, width: 150, crop: :fill, class: "user-avatar"  %>
-    <% end %>
-    <h1 class="text-center"><%= @user.username %></h1>
-  </div>
-
-  <div class="profile-right">
+  <div class="profile-left">
     <div class="user-choices">
       <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
         <h2>Brews you've enjoyed!</h2>
@@ -109,7 +100,15 @@
           <% end %>
         </div>
     <!--   </div> -->
-
     </div>
+  </div>
+
+  <div class="profile-right pl-3 pr3">
+    <% if @user.avatar.attached? %>
+      <%= cl_image_tag @user.avatar.key, height: 150, width: 150, crop: :fill, class: "user-avatar" %>
+    <% else %>
+      <%= image_tag "logo.png",height: 150, width: 150, crop: :fill, class: "user-avatar"  %>
+    <% end %>
+    <h1 class="text-center"><%= @user.username %></h1>
   </div>
 </div>
