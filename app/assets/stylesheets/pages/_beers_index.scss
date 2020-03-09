@@ -128,3 +128,10 @@ input {
     text-decoration: none;
   }
 }
+
+.beer-card-content a {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+  }
