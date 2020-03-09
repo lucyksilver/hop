@@ -30,7 +30,6 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   pubSelection();
   tagSelection();
-  // randomizer();
 ScrollReveal().reveal('.scroll-reveal', {
   delay: 150,
   // origin: 'top',
@@ -55,6 +54,7 @@ ScrollReveal().reveal('.scroll-reveal-tag', {
   //       left: 0,
   //   },
 });
+  randomizer();
 })
 
 

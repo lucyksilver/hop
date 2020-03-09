@@ -11,20 +11,26 @@
     <% @beers.each do |beer| %>
       <div class="beer-card scroll-reveal">
         <%= link_to "", beer_path(beer), class: "beer-card-link" %>
-        <%= cl_image_tag beer.photo.key, width: 200, class: "beer-card-img" %>
+        <%= cl_image_tag beer.photo.key, height: 150, width: 200, class: "beer-card-image" %>
 
 
         <div class="beer-card-content">
           <div class="beer-card-title">
             <p><%= beer.name%></p>
-
             <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
 
           </div>
           <div class="beer-card-tags">
             <% beer.tags.each do |tag| %>
-              <!-- logic to do later (Arthur) -->
-              <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+            <% if params[:search].present? %>
+              <% if params[:search][:tags].include?(tag.id.to_s) %>
+                <span class="beer-active-tag"><%= tag.name %></span>
+              <% else %>
+                <span class="beer-tag"><%= tag.name %></span>
+              <% end %>
+            <% else %>
+              <span class="beer-active-tag"><%= tag.name %></span>
+            <% end %>
             <% end %>
           </div>
         </div>

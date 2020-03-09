@@ -16,7 +16,7 @@ class ChoicesController < ApplicationController
         lat: current_user.latitude,
         lng: current_user.longitude,
         infoWindow: render_to_string(partial: "info_window_user", locals: { user: current_user }),
-        image_url: helpers.asset_url("https://res.cloudinary.com/dtoehsudt/image/upload/v1582804201/#{current_user.avatar.key}")
+        # image_url: helpers.asset_url("https://res.cloudinary.com/dtoehsudt/image/upload/v1582804201/#{current_user.avatar.key}")
       }]
 
   end
