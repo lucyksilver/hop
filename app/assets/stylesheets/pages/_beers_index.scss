@@ -83,6 +83,8 @@ input {
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 4px;
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
 
 
@@ -92,6 +94,8 @@ input {
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 4px;
+  margin-bottom: 4px;
+  margin-right: 4px;
 }
 .beer-card-link {
   position: absolute;
@@ -102,7 +106,7 @@ input {
   z-index: 1;
 }
 .beer-card-img {
-  width: 100px;
+  width: 150px;
   object-fit: cover;
   border-radius: 6px;
   margin-right: 20px;

@@ -14,7 +14,7 @@
         <% @first_three.each do |choice| %>
           <div class="beer-card">
             <%= link_to "", choice_path(choice), class: "beer-card-link" %>
-             <%= cl_image_tag choice.beer.photo.key, width: 200, class: "beer-card-img" %>
+             <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
             <div class="beer-card-content">
               <div class="beer-card-title">
                 <p><%= choice.beer.name%></p>
@@ -33,7 +33,7 @@
             <% @remainder.each do |choice| %>
               <div class="collapse beer-card" id="collapseChoices">
                 <%= link_to "", choice_path(choice), class: "beer-card-link" %>
-                <%= cl_image_tag choice.beer.photo.key, width: 200, class: "beer-card-img" %>
+                <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
                 <div class="beer-card-content">
                   <div class="beer-card-title">
                     <p><%= choice.beer.name%></p>
