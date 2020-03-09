@@ -24,13 +24,39 @@ require("channels")
 import { initMapbox } from '../plugins/init_mapbox';
 import { pubSelection } from '../components/pub_selection';
 import { tagSelection } from '../components/tag_selection';
+import ScrollReveal from 'scrollreveal'
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
   pubSelection();
   tagSelection();
-  randomizer()
+  // randomizer();
+ScrollReveal().reveal('.scroll-reveal', {
+  delay: 150,
+  // origin: 'top',
+  distance: '-30px',
+  interval: 150,
+  // viewOffset: {
+  //       top: 100,
+  //       right: 0,
+  //       bottom: 0,
+  //       left: 0,
+  //   },
+});
+ScrollReveal().reveal('.scroll-reveal-tag', {
+  delay: 50,
+  // origin: 'top',
+  distance: '-30px',
+  interval: 10,
+  // viewOffset: {
+  //       top: 100,
+  //       right: 0,
+  //       bottom: 0,
+  //       left: 0,
+  //   },
+});
 })
+
 
 
 
