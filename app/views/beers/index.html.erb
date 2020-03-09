@@ -23,8 +23,11 @@
           </div>
           <div class="beer-card-tags">
             <% beer.tags.each do |tag| %>
-              <!-- logic to do later (Arthur) -->
-              <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+              <% if params[:search][:tags].include?(tag.id.to_s) %>
+                <span class="beer-active-tag mr-1"><%= tag.name %></span>
+              <% else %>
+                <span class="beer-tag mr-1"><%= tag.name %></span>
+              <% end %>
             <% end %>
           </div>
         </div>
