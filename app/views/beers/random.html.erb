@@ -5,6 +5,7 @@
         <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
         <div class= "random-image" >
            <%= cl_image_tag @random_beer.photo.key, width: 200, class: "random-card-img" %>
+
         </div>
         <div class="random-card-content">
           <p><%= @random_beer.name%></p>
