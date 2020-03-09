@@ -9,7 +9,7 @@
 
   <div class="beer-cards">
     <% @beers.each do |beer| %>
-      <div class="beer-card">
+      <div class="beer-card scroll-reveal">
         <%= link_to "", beer_path(beer), class: "beer-card-link" %>
         <%= cl_image_tag beer.photo.key, width: 100, class: "beer-card-img"  %>
         <div class="beer-card-content">
