@@ -17,7 +17,6 @@
         <div class="beer-card-content">
           <div class="beer-card-title">
             <p><%= beer.name%></p>
-
             <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
 
           </div>
