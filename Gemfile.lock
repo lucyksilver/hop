@@ -254,11 +254,9 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.0)
-
+    zeitwerk (2.2.2)
 PLATFORMS
   ruby
-
 DEPENDENCIES
   autoprefixer-rails
   bootsnap (>= 1.4.2)
@@ -288,9 +286,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
-
 RUBY VERSION
    ruby 2.6.5p114
-
 BUNDLED WITH
    2.1.4
