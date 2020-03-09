@@ -8,24 +8,25 @@
 <div class="main-container">
   <div class="container-hop">
     <div class="top-box text-center">
-      <div class="home-nav d-flex justify-content-around align-items-center">
-        <h4>SINCE</h4>
-        <%= image_tag "logo.svg", class: 'hop-logo' %>
-        <h4>2020</h4>
+      <div class="top-top-box">
+        <div class="home-nav d-flex justify-content-around align-items-center">
+          <h4>SINCE</h4>
+          <%= image_tag "logo.svg", class: 'hop-logo' %>
+          <h4>2020</h4>
+        </div>
       </div>
 
       <h1 class="box-shadow">HOP!</h1>
-      <h2>FIND LOCAL BEER</h2>
+      <h2 class="second-header">FIND LOCAL BEER</h2>
       <div class="hop-it-btn-container">
         <span class="left-square"></span>
         <%= link_to "HOP IT!", tags_path, class: "hop-it-btn" %>
         <span class="right-square"></span>
       </div>
-      <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-random-btn" %>
     </div>
 
-    <div class="bottom-box text-center">
-      <h4>HAVE A BREW IN MIND?</h4>
+    <div class="bottom-box d-flex justify-content-around">
+      <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-search-btn" %>
 
       <%= link_to "SEARCH 300 BREWS", beers_path, class: "home-search-btn" %>
 

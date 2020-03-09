@@ -1,5 +1,5 @@
 .container {
-  background-color: $base;
+  background-color: $beer-yellow;
 }
 
 .beer-show-container {
@@ -14,7 +14,7 @@
 }
 
 .beer-right-half {
-  background-color: $base;
+  background-color: $beer-yellow;
   position: relative;
   width: 50vw;
   height: 100vh;
@@ -37,24 +37,24 @@
 }
 
 .fa-heart {
-  color: $coral;
+  color: $beer-brown;
 }
 
 .show-tag {
-  border: 2px solid $gray;
+  border: 2px solid $beer-red;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $gray;
+  color: $beer-red;
   font-size: 14px;
   margin-right: 4px;
 }
 
 .show-tag-active {
-  border: 2px solid $coral;
-  background-color: $coral;
+  border: 2px solid $beer-brown;
+  background-color: $beer-brown;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $gray;
+  color: $beer-red;
   font-size: 14px;
   margin-right: 4px;
 }
@@ -90,7 +90,7 @@
 
 .pub-card-active {
   .pub-card-image {
-    border: 3px solid $coral;
+    border: 3px solid $beer-brown;
     border-radius: 8px;
     padding: 3px;
   }
@@ -117,21 +117,21 @@
 
 .show-all {
   text-decoration: none;
-  color: $coral;
+  color: $beer-brown;
   opacity: 0.5;
   &:hover {
     text-decoration: none;
-    color: $coral;
+    color: $beer-brown;
     opacity: 1;
   }
 }
 
 .show-btn {
   padding: 10px 50px;
-  border: 2px solid $gray;
-  background-color: $gray;
+  border: 2px solid $beer-red;
+  background-color: $beer-red;
   border-radius: 5px;
-  color: $coral;
+  color: $beer-brown;
   opacity: 0.8;
   &:hover {
     opacity: 1;
