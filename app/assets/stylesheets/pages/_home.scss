@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 body {
-  background-color: $coral;
+  background-color: $beer-yellow;
+  letter-spacing: 1px;
 }
 
 .main-container {
@@ -11,10 +12,18 @@ body {
 }
 
 .container-hop {
-  width: 600px;
+  width: 800px;
   margin: 0px auto;
   position: relative;
+}
 
+.top-top-box {
+  display: flex;
+  justify-content: center;
+}
+
+.home-nav {
+  width: 300px;
 }
 
 .log-in-btn-homepage {
@@ -23,17 +32,25 @@ body {
   top: 25px;
 }
 .home-nav h4 {
-  font-family: $body-font;
+  font-family: $headers-font;
+  color: white;
+  text-shadow: $beer-red 2px 2px;
 }
 
 .hop-logo {
   width: 120px;
 }
 
+.second-header {
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: $beer-red 2px 2px;
+}
+
 .top-box {
-  background-color:$base;
+  background-color:$beer-yellow;
   padding: 10px 50px 20px 50px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .top-box h2, h3, h5{
@@ -42,28 +59,30 @@ body {
 
 .top-box h5 a {
   text-decoration: none;
-  color: $gray;
+  color: $beer-red;
   &:hover {
-    color: $coral;
+    color: $beer-brown;
   }
 }
 
 .bottom-box {
   margin-top: 15px;
   padding: 20px 30px;
-  background-color: $gray;
-  border-radius: 10px;
+  background-color: $beer-yellow;
+  border-radius: 4px;
 }
 
 .bottom-box h4 {
-  color: $base;
+  color: $beer-brown;
   font-family: $body-font;
   margin-bottom: 18px;
 }
 
 .box-shadow {
-  text-shadow: 5px 3px 0px #F9827B;
+  text-shadow: 5px 3px 0px black;
   font-size: 110px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 

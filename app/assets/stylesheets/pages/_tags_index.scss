@@ -1,14 +1,14 @@
 .tags-container {
   padding: 48px;
-  background-color: $base;
+  background-color: $beer-yellow;
   border-radius: 5px;
 }
 
 .tags-header {
   font-size: 32px;
   text-align: center;
-  color: $base;
-  background-color: $gray;
+  color: $beer-yellow;
+  background-color: $beer-red;
   border-radius: 4px;
 }
 
@@ -20,13 +20,13 @@
 }
 
 .tag-active {
-  background-color: $coral;
-  color: $base !important;
+  background-color: $beer-brown;
+  color: $beer-yellow !important;
 }
 
 .tag-card {
-  color: $coral;
-  border: 2px solid $coral;
+  color: $beer-brown;
+  border: 2px solid $beer-brown;
   border-radius: 4px;
   position: relative;
   width: 100%;
@@ -55,7 +55,7 @@
   span {
     width: 64px;
     height: 64px;
-    background-color: $base;
+    background-color: $beer-yellow;
     transform: rotate(45deg);
   }
   .left-square {
@@ -70,15 +70,15 @@
 
 .tag-btn {
   padding: 12px 80px;
-  color: $base;
+  color: $beer-yellow;
   font-size: 24px;
-  background-color: $gray;
+  background-color: $beer-red;
   width: 100%;
   transition-duration: 0.3s;
   &:hover {
     text-decoration: none;
-    color: $gray;
-    background-color: $coral;
+    color: $beer-red;
+    background-color: $beer-brown;
   }
   &:after {
     width: 64px;

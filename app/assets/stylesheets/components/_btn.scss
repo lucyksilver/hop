@@ -1,15 +1,15 @@
 .hop-it-btn {
   padding: 6px 80px;
-  color: $base;
+  color: $beer-yellow;
   font-size: 30px;
-  background-color: $gray;
+  background-color: $beer-red;
   width: 100%;
   margin: 24px 0 24px 0;
   transition-duration: 0.3s;
   &:hover {
     text-decoration: none;
-    color: $gray;
-    background-color: $coral;
+    color: $beer-red;
+    background-color: $beer-brown;
   }
   &:after {
     width: 64px;
@@ -27,7 +27,7 @@
   span {
     width: 64px;
     height: 64px;
-    background-color: $base;
+    background-color: $beer-yellow;
     transform: rotate(45deg);
   }
   .left-square {
@@ -44,14 +44,14 @@
 
 .random-btn {
   padding: 10px 50px;
-  background-color: $gray;
+  background-color: $beer-red;
   max-width: 160px;
   border-radius: 5px;
-  color: $coral;
+  color: $beer-brown;
   &:hover {
-    background-color: $coral;
-    color: $gray;
-    border: 1px solid $gray;
+    background-color: $beer-brown;
+    color: $beer-red;
+    border: 1px solid $beer-red;
     text-decoration: none;
   }
 }
@@ -59,15 +59,15 @@
 .home-search-btn {
   padding: 15px;
   margin: 10px;
-  background-color: $base;
+  background-color: $beer-yellow;
   text-decoration: none;
-  color: $coral;
-  border: 3px solid $coral;
+  color: $beer-brown;
+  border: 3px solid $beer-brown;
   border-radius: 3px;
   padding: 5px;
   transition: 0.3s;
   &:hover {
-    color: $gray;
+    color: $beer-red;
     text-decoration: none;
     border: 3px solid transparent;
   }
@@ -76,34 +76,34 @@
 .home-search-btn-1 {
   padding: 15px;
   margin: 10px;
-  background-color: $base;
+  background-color: $beer-yellow;
   text-decoration: none;
-  color: $coral;
-  border: 3px solid $base;
+  color: $beer-brown;
+  border: 3px solid $beer-yellow;
   border-radius: 3px;
   padding: 5px;
   transition: 0.3s;
   &:hover {
-    color: $gray;
+    color: $beer-red;
     text-decoration: none;
     border: 3px solid transparent;
   }
 }
 
 .home-random-btn {
-  border: 1px $gray solid;
+  border: 1px $beer-red solid;
   padding: 7px;
   border-radius: 3px;
   margin-bottom: 10px;
   transition: 0.4s;
   text-decoration: none;
-  color: $gray;
+  color: $beer-red;
   transition: 0.3s;
   &:hover {
-    background-color: $gray;
-    color: $coral;
+    background-color: $beer-red;
+    color: $beer-brown;
     text-decoration: none;
-    border: 1px solid $coral;
+    border: 1px solid $beer-brown;
   }
 }
 
