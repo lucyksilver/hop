@@ -11,7 +11,7 @@
     <% @beers.each do |beer| %>
       <div class="beer-card scroll-reveal">
         <%= link_to "", beer_path(beer), class: "beer-card-link" %>
-        <%= cl_image_tag beer.photo.key, width: 200, class: "beer-card-img" %>
+        <%= cl_image_tag beer.photo.key, height: 150, width: 200, class: "beer-card-image" %>
 
 
         <div class="beer-card-content">
@@ -23,11 +23,15 @@
           </div>
           <div class="beer-card-tags">
             <% beer.tags.each do |tag| %>
+            <% if params[:search].present? %>
               <% if params[:search][:tags].include?(tag.id.to_s) %>
-                <span class="beer-active-tag mr-1"><%= tag.name %></span>
+                <span class="beer-active-tag mr-1 mb-1"><%= tag.name %></span>
               <% else %>
-                <span class="beer-tag mr-1"><%= tag.name %></span>
+                <span class="beer-tag mr-1 mb-1"><%= tag.name %></span>
               <% end %>
+            <% else %>
+              <span class="beer-active-tag mr-1 mb-1"><%= tag.name %></span>
+            <% end %>
             <% end %>
           </div>
         </div>
