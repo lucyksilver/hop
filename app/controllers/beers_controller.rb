@@ -11,7 +11,8 @@ class BeersController < ApplicationController
     elsif params[:search]
       # includes acces the info of beers tags in the where
       tag_ids = params[:search][:tags].reject { |id| id == ""}
-      @beers = Beer.includes(:beer_tags).where(beer_tags: { tag_id: tag_ids })
+      beers = Beer.includes(:beer_tags).where(beer_tags: { tag_id: tag_ids })
+      @beers = beers.sort_by { |beer| beer.tags.where(beer_tags: { tag_id: tag_ids }).count }.reverse
     else
       @beers = Beer.all
     end
