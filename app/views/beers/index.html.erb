@@ -11,7 +11,7 @@
     <% @beers.each do |beer| %>
       <div class="beer-card">
         <%= link_to "", beer_path(beer), class: "beer-card-link" %>
-        <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
+        <%= cl_image_tag beer.photo.key, width: 200, class: "beer-card-img" %>
         <div class="beer-card-content">
           <div class="beer-card-title">
             <p><%= beer.name%></p>

@@ -4,7 +4,7 @@
       <div class="random-card d-none fadeIn" id="card">
         <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
         <div class= "random-image" >
-          <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "random-card-img" %>
+           <%= cl_image_tag @random_beer.photo.key, width: 200, class: "random-card-img" %>
         </div>
         <div class="random-card-content">
           <p><%= @random_beer.name%></p>
