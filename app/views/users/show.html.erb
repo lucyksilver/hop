@@ -3,7 +3,7 @@
   <div class="profile-left">
     <div class="user-choices">
       <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
-        <h2>Brews you've enjoyed!</h2>
+        <h2>Brews you've discovered!</h2>
         <% if @user.choices.count > 3 %>
           <a class="home-random-btn" data-toggle="collapse" href="#collapseChoices" role="button" aria-expanded="false" aria-controls="collapseChoices">
           View All Choices
@@ -13,7 +13,7 @@
       <div class="beer-cards-index">
         <% @first_three.each do |choice| %>
           <div class="beer-card">
-            <%= link_to "", choice_path(choice), class: "beer-card-link" %>
+            <%= link_to "", beer_path(choice.beer), class: "beer-card-link" %>
              <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
             <div class="beer-card-content">
               <div class="beer-card-title">
@@ -32,7 +32,7 @@
           <% if @user.choices.count > 3 %>
             <% @remainder.each do |choice| %>
               <div class="collapse beer-card" id="collapseChoices">
-                <%= link_to "", choice_path(choice), class: "beer-card-link" %>
+                <%= link_to "", beer_path(choice.beer), class: "beer-card-link" %>
                 <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
                 <div class="beer-card-content">
                   <div class="beer-card-title">
@@ -63,7 +63,7 @@
       <div class="beer-cards-index">
         <% @first_three_likes.each do |like| %>
           <div class="beer-card">
-            <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>
+            <%= link_to "", beer_path(like.beer), class: "beer-card-link" %>
             <%= image_tag "https://images.unsplash.com/photo-1498058942544-e1ff4563ac64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80", class: "beer-card-img" %>
             <div class="beer-card-content">
               <div class="beer-card-title">
