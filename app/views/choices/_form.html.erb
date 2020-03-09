@@ -13,9 +13,9 @@
         <div class="pub-card" id="pub-border">
           <div class= "pub-card-image">
              <% if pub.photo.attached? %>
-              <%= cl_image_tag pub.photo.key, width: 100 %>
+              <%= cl_image_tag pub.photo.key, height: 125, width: 125, class: "pub-img" %>
              <% else %>
-              <%= image_tag "logo.png", width: 100 %>
+              <%= image_tag "logo.png",  height: 125, width: 125, class: "pub-img" %>
             <% end %>
           </div>
           <input class="d-none" type="radio" value="<%= pub.id %>" name="choice[pub_id]" id="choice_pub_id_<%= pub.id %>">
@@ -30,9 +30,9 @@
       </div>
   </fieldset>
   <div class="text-center">
-    <%= link_to "View all", beer_path(@beer, view_all: true), class: "show-all" %>
+    <%= link_to "Show all pubs", beer_path(@beer, view_all: true), class: "show-all" %>
   </div>
   <div class="text-center m-3">
-    <input class="show-btn" type="submit" name="commit" value="Create Choice" data-disable-with="Create Choice">
+    <input class="show-btn" type="submit" name="commit" value="Choose pub" data-disable-with="Create Choice">
   </div>
 <% end %>

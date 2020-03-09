@@ -22,7 +22,7 @@ user = User.create!(email: "test1@test.com", password:"123123", username: "test"
 p user
 
 fruity = Tag.create!(name: "Fruity", description: "Fruit has been added to the brew to create interesting, floral flavours")
-rich = Tag.create!(name: "rich", description: "Dark malty flavours")
+rich = Tag.create!(name: "Rich", description: "Dark malty flavours")
 sweet = Tag.create!(name: "Sweet", description: "sweet")
 bitter = Tag.create!(name: "Bitter", description: "bitter")
 fresh = Tag.create!(name: "Fresh", description: "fresh")
@@ -40,9 +40,11 @@ medium = Tag.create!(name: "Medium", description: "medium")
 strong = Tag.create!(name: "Strong", description: "strong")
 
 lager = Tag.create!(name: "Lager", description: "larger")
+pilsner = Tag.create!(name: "Pilsner", description: "pilsner")
 ale = Tag.create!(name: "Ale", description: "ale")
 stout = Tag.create!(name: "Stout", description: "stout")
 wheat_beer = Tag.create!(name: "Wheat Beer", description: "Wheat")
+
 p wheat_beer
 
 file_b1 = URI.open('https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
