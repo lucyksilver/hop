@@ -66,6 +66,12 @@ input {
   color: $light-gray;
 }
 
+.beer-card-image {
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
 .beer-card-tags {
   display: flex;
   flex-wrap: wrap;
