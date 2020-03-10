@@ -22,7 +22,7 @@
               <div class="beer-card-tags">
                 <% choice.beer.tags.each do |tag| %>
                   <!-- logic to do later (Arthur) -->
-                  <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                  <span class="beer-active-tag"><%= tag.name %></span>
                 <% end %>
               </div>
             </div>
@@ -41,7 +41,7 @@
                   <div class="beer-card-tags">
                     <% choice.beer.tags.each do |tag| %>
                       <!-- logic to do later (Arthur) -->
-                      <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                      <span class="beer-active-tag"><%= tag.name %></span>
                     <% end %>
                   </div>
                 </div>
@@ -72,7 +72,7 @@
               <div class="beer-card-tags">
                 <% like.beer.tags.each do |tag| %>
                   <!-- logic to do later (Arthur) -->
-                  <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                  <span class="beer-active-tag"><%= tag.name %></span>
                 <% end %>
               </div>
             </div>
@@ -91,7 +91,7 @@
                   <div class="beer-card-tags">
                     <% like.beer.tags.each do |tag| %>
                       <!-- logic to do later (Arthur) -->
-                      <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+                      <span class="beer-active-tag"><%= tag.name %></span>
                     <% end %>
                   </div>
                 </div>
@@ -103,12 +103,56 @@
     </div>
   </div>
 
-  <div class="profile-right pl-3 pr3">
+  <div class="profile-right pl-3 pr-3">
     <% if @user.avatar.attached? %>
       <%= cl_image_tag @user.avatar.key, height: 150, width: 150, crop: :fill, class: "user-avatar" %>
     <% else %>
-      <%= image_tag "logo.png",height: 150, width: 150, crop: :fill, class: "user-avatar"  %>
+      <%= image_tag "avatar.png",height: 150, width: 150, crop: :fill, class: "user-avatar"  %>
     <% end %>
     <h1 class="text-center"><%= @user.username %></h1>
+    <div class="profile-content">
+      <p> Discovered <%= pluralize @user.choices.count, "beer" %> </p>
+      <% if  @user.choices.count < 10 %>
+        <p>Newbie</p>
+      <% elsif  @user.choices.count < 25 %>
+        <p>Beginner</p>
+      <% elsif  @user.choices.count < 50 %>
+        <p>Master</p>
+      <% elsif  @user.choices.count > 99 %>
+        <p>Expert</p>
+      <% end %>
+    </div>
+
+
+    <% if  @user.choices.count < 10 %>
+      <ul class="badges list-inline">
+        <li class="active"><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-medal"></i></i></li>
+        <li><i class="fas fa-trophy"></i></li>
+        <li><i class="fas fa-rocket"></i></i></li>
+      </ul>
+    <% elsif  @user.choices.count < 25 %>
+      <ul class="badges list-inline">
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-medal"></i></i></li>
+        <li><i class="fas fa-trophy"></i></li>
+        <li><i class="fas fa-rocket"></i></i></li>
+      </ul>
+    <% elsif  @user.choices.count < 50 %>
+      <ul class="badges list-inline">
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-medal"></i></i></li>
+        <li><i class="fas fa-trophy"></i></li>
+        <li><i class="fas fa-rocket"></i></i></li>
+      </ul>
+    <% elsif  @user.choices.count > 99 %>
+      <ul class="badges list-inline">
+        <li><i class="fas fa-star"></i></li>
+        <li><i class="fas fa-medal"></i></i></li>
+        <li><i class="fas fa-trophy"></i></li>
+        <li><i class="fas fa-rocket"></i></i></li>
+      </ul>
+    <% end %>
+
   </div>
 </div>
