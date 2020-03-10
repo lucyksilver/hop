@@ -21,19 +21,19 @@
 }
 
 input {
-  color: $beer-brown;
+  color: $beige-bg;
 }
 
 .beers-search-btn {
   padding: 0 25px;
-  background-color: $beer-red;
-  border: 2px solid $beer-brown;
+  background-color: $midnight-blue;
+  border: 2px solid $beige-bg;
   border-radius: 5px;
-  color: $beer-brown;
+  color: $beige-bg;
   &:hover {
-  background-color: $beer-brown;
+  background-color: $beige-bg;
   border-radius: 5px;
-  color: $beer-red;
+  color: $midnight-blue;
   }
 }
 
@@ -99,10 +99,10 @@ input {
 }
 
 .beer-tag {
-  border: 2px solid $beer-brown;
+  border: 2px solid $beige-bg;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $beer-brown;
+  color: $beige-bg;
 
   font-size: 14px;
   padding: 8px 16px;
@@ -166,11 +166,11 @@ input {
   text-decoration: none;
   padding: 10px 25px;
   border-radius: 5px;
-  background-color: $beer-red;
-  color: $beer-brown;
+  background-color: $midnight-blue;
+  color: $beige-bg;
   &:hover {
-    background-color: $beer-brown;
-    color: $beer-red;
+    background-color: $beige-bg;
+    color: $midnight-blue;
     text-decoration: none;
   }
 }

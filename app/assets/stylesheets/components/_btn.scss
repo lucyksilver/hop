@@ -2,13 +2,13 @@
   padding: 6px 80px;
   color: $beige-yellow;
   font-size: 30px;
-  background-color: $charcoal;
+  background-color: $midnight-blue;
   width: 100%;
   margin: 24px 0 24px 0;
   &:hover {
     text-decoration: none;
-    color: $beer-red;
-    background-color: $beer-brown;
+    color: $midnight-blue;
+    background-color: $beige-bg;
   }
   &:after {
     width: 64px;
@@ -73,14 +73,14 @@
 
 .random-btn {
   padding: 10px 50px;
-  background-color: $beer-red;
+  background-color: $midnight-blue;
   max-width: 160px;
   border-radius: 5px;
-  color: $beer-brown;
+  color: $beige-bg;
   &:hover {
-    background-color: $beer-brown;
-    color: $beer-red;
-    border: 1px solid $beer-red;
+    background-color: $beige-bg;
+    color: $midnight-blue;
+    border: 1px solid $midnight-blue;
     text-decoration: none;
   }
 }
@@ -88,15 +88,15 @@
 .home-search-btn {
   padding: 15px;
   margin: 10px;
-  background-color: $beer-yellow;
+  background-color: $beige-yellow;
   text-decoration: none;
-  color: $beer-brown;
-  border: 3px solid $beer-brown;
+  color: $beige-bg;
+  border: 3px solid $beige-bg;
   border-radius: 3px;
   padding: 5px;
   transition: 0.3s;
   &:hover {
-    color: $beer-red;
+    color: $midnight-blue;
     text-decoration: none;
     border: 3px solid transparent;
   }
@@ -105,34 +105,34 @@
 .home-search-btn-1 {
   padding: 15px;
   margin: 10px;
-  background-color: $beer-yellow;
+  background-color: $beige-base;
   text-decoration: none;
-  color: $beer-brown;
-  border: 3px solid $beer-yellow;
+  color: $beige-bg;
+  border: 3px solid $beige-base;
   border-radius: 3px;
   padding: 5px;
   transition: 0.3s;
   &:hover {
-    color: $beer-red;
+    color: $midnight-blue;
     text-decoration: none;
     border: 3px solid transparent;
   }
 }
 
 .home-random-btn {
-  border: 1px $beer-red solid;
+  border: 1px $midnight-blue solid;
   padding: 7px;
   border-radius: 3px;
   margin-bottom: 10px;
   transition: 0.4s;
   text-decoration: none;
-  color: $beer-red;
+  color: $midnight-blue;
   transition: 0.3s;
   &:hover {
-    background-color: $beer-red;
-    color: $beer-brown;
+    background-color: $midnight-blue;
+    color: $beige-bg;
     text-decoration: none;
-    border: 1px solid $beer-brown;
+    border: 1px solid $beige-bg;
   }
 }
 
