@@ -1,6 +1,7 @@
 <div class="random-container text-center">
-  <h2 class= "text-center beer-header" id="randomBeer" data-actual-beer="<%= @random_beer.name %>" data-beers="<%= @beers.map { |beer| beer.name } %>"></h2>
+  <h2 class= "text-center beer-header beer-title" id="randomBeer" data-actual-beer="<%= @random_beer.name %>" data-beers="<%= @beers.map { |beer| beer.name } %>"></h2>
     <div class="random-cards text-center">
+
       <div class="random-card d-none fadeIn" id="card">
         <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
         <div class= "random-image" >
