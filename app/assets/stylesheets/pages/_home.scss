@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 body {
-  background-color: $beer-yellow;
+  background-color: $beige-bg;
   letter-spacing: 1px;
 }
 
@@ -34,7 +34,7 @@ body {
 .home-nav h4 {
   font-family: $headers-font;
   color: white;
-  text-shadow: $beer-red 2px 2px;
+  text-shadow: $white 2px 2px;
 }
 
 .hop-logo {
@@ -44,11 +44,11 @@ body {
 .second-header {
   letter-spacing: 1px;
   color: white;
-  text-shadow: $beer-red 2px 2px;
+  text-shadow: $white 2px 2px;
 }
 
 .top-box {
-  background-color: #FFEFD1;
+  background-color: $beige-base;
   padding: 10px 50px 20px 50px;
   border-radius: 4px;
 }
@@ -68,7 +68,7 @@ body {
 .bottom-box {
   margin-top: 15px;
   padding: 20px 30px;
-  background-color: #FFEFD1;
+  background-color: $beige-base;
   border-radius: 4px;
 }
 
