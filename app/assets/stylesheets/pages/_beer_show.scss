@@ -1,5 +1,17 @@
-.container {
-  background-color: $beer-yellow;
+.container.beers-index {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 183px);
+    top: 138px;
+    left: 0;
+    background-color: $beer-yellow;
+    border-radius: 7px;
+    z-index: 0;
+  }
 }
 
 .beer-show-container {
