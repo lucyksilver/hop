@@ -7,7 +7,7 @@
 .tags-header {
   font-size: 32px;
   text-align: center;
-  color: $beige-base;
+  color: $beige-yellow;
   background-color: $midnight-blue;
   border-radius: 4px;
 }
@@ -22,6 +22,7 @@
 .tag-active {
   background-color: $beige-bg;
   color: $beige-base !important;
+  border: 2px solid $beige-bg!important;
 }
 
 .tag-card {
@@ -70,7 +71,7 @@
 
 .tag-btn {
   padding: 12px 80px;
-  color: $beige-base;
+  color: $beige-yellow;
   font-size: 24px;
   background-color: $midnight-blue;
   width: 100%;
@@ -78,7 +79,7 @@
   &:hover {
     text-decoration: none;
     color: $midnight-blue;
-    background-color: $beige-bg;
+    background-color: $beige-yellow;
   }
   &:after {
     width: 64px;

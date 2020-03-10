@@ -19,6 +19,7 @@
 }
 
 .beer-left-half {
+  border-right: solid 5px $midnight-blue;
   width: 50vw;
   height: 100vh;
   background-size: cover;
@@ -26,6 +27,7 @@
 }
 
 .beer-right-half {
+  border-left: solid 5px $beige-bg;
   background-color: $beige-base;
   position: relative;
   width: 50vw;
