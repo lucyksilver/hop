@@ -4,7 +4,15 @@
 }
 
 .profile-right {
+  position: sticky;
+  top: 50px;
   width: 25%;
+  height: 500px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-around;
 }
 
 .user-avatar {
@@ -18,3 +26,31 @@
 .choice-titles-buttons {
   padding: 0px 50px;
 }
+
+.badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+  font-size: 24px;
+}
+
+.active {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  background-color: $beige-yellow;
+  color: $midnight-blue;
+  border-radius: 50%;
+  text-align: center;
+}
+
+li {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  background-color: rgba(212, 212, 212, 0.5);
+  color: rgba(49, 49, 49, 0.5);
+  border-radius: 50%;
+  text-align: center;
+}
+

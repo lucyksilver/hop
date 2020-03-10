@@ -126,9 +126,12 @@ input {
 }
 .beer-card-img {
   width: 150px;
+  position: relative;
   object-fit: cover;
   border-radius: 6px;
   margin-right: 20px;
+  border: 6px solid white;
+  z-index: 2;
 }
 
 .beer-card-content {
