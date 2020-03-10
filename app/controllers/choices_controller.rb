@@ -6,18 +6,33 @@ class ChoicesController < ApplicationController
     @pub = @choice.pub
     @pubs = Pub.geocoded # returns flats with coordinates
 
-    @markers =
-      [{
-        lat: @pub.latitude,
-        lng: @pub.longitude,
-        infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
-        image_url: helpers.asset_url('beer_icon_2.png')
-      }, {
-        lat: current_user.latitude,
-        lng: current_user.longitude,
-        infoWindow: render_to_string(partial: "info_window_user", locals: { user: current_user }),
-        # image_url: helpers.asset_url("https://res.cloudinary.com/dtoehsudt/image/upload/v1582804201/#{current_user.avatar.key}")
-      }]
+    if current_user.avatar.attached?
+      @markers =
+        [{
+          lat: @pub.latitude,
+          lng: @pub.longitude,
+          infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
+          image_url: helpers.asset_url('beer_icon_2.png')
+        }, {
+          lat: current_user.latitude,
+          lng: current_user.longitude,
+          infoWindow: render_to_string(partial: "info_window_user", locals: { user: current_user }),
+          image_url: helpers.asset_url("https://res.cloudinary.com/dtoehsudt/image/upload/v1582804201/#{current_user.avatar.key}")
+        }]
+    else
+        @markers =
+        [{
+          lat: @pub.latitude,
+          lng: @pub.longitude,
+          infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
+          image_url: helpers.asset_url('beer_icon_2.png')
+        }, {
+          lat: current_user.latitude,
+          lng: current_user.longitude,
+          infoWindow: render_to_string(partial: "info_window_user", locals: { user: current_user }),
+          image_url: helpers.asset_url("avatar.png")
+        }]
+    end
 
   end
 

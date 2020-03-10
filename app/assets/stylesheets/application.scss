@@ -15,3 +15,7 @@
 @import "pages/beer_show";
 @import "components/btn";
 @import "pages/random_index";
+
+a:hover {
+  text-decoration: none !important;
+}

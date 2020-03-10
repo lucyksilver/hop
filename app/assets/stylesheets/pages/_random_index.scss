@@ -5,16 +5,17 @@
 }
 
 .random-container {
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
 .random-cards {
-  padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 32px;
   cursor: pointer;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .random-card {
@@ -46,4 +47,9 @@
 
 .random-image {
   margin: 24px;
+}
+
+.beer-title {
+  font-size: 80px;
+  margin-top: 200px;
 }

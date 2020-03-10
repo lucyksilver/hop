@@ -4,13 +4,34 @@
       <h1>Your Local Brew!</h1>
       <h3>Enjoy your <%= @choice.beer.name %> at <%= @choice.pub.name %></h3>
       <h4>Only <%= (Geocoder::Calculations.distance_between([@choice.pub.latitude, @choice.pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away</h4>
-      <div title="Add to Calendar" class="addeventatc" data-styling="none">
-      <h3 class='calendar'>Add to your Calendar <%= image_tag "icon-calendar-t1.svg", width:18 %></h3>
+
+
+      <div title="Add to Calendar" class="addeventatc" data-render="inline-buttons">
+      <h3 class='calendar'><i class="fas fa-calendar-check"></i></h3>
           <span class="title">Let's have a beer!</span>
           <span class="description">Enjoy your <%= @choice.beer.name %>! Chosen by you, supported by HOP!</span>
           <span class="location"><%=@choice.pub.address %> </span>
       </div>
+
+      <div class='icons'>
+         <h4>Share with friends!</h4>
+        <div class= 'd-flex justify-content-around'>
+            <%= link_to "http://www.facebook.com/sharer/sharer.php?u=#{choice_url(@choice)}&t=#{@choice.beer.name}", target: "_blank" do %>
+            <i class="fab fa-facebook-f icon"></i>
+          <% end %>
+            <%= link_to "https://twitter.com/intent/tweet?text=#{choice_url(@choice)}&url=#{@choice.beer.name}", target: "_blank" do %>
+            <i class="fab fa-twitter icon"></i>
+          <% end %>
+          <%= link_to "http://pinterest.com/pin/create/button/?url=#{choice_url(@choice)}", target: "_blank" do %>
+            <i class="fab fa-pinterest-p icon"></i>
+          <% end %>
+        </div>
+      </div>
+
     </div>
+
+
+
   </div>
   <div class="item-right-half d-flex align-items-center justify-content-center">
     <div id="map"
