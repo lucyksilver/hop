@@ -1,35 +1,51 @@
-<div class="log-in-btn-homepage">
-  <% if user_signed_in? %>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "home-search-btn-1" %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path, class: "home-search-btn-1" %>
-  <% end %>
-</div>
-<div class="main-container">
-  <div class="container-hop">
-    <div class="top-box text-center">
-      <div class="top-top-box">
-        <div class="home-nav d-flex justify-content-around align-items-center">
-          <h4>SINCE</h4>
-          <%= image_tag "logo.svg", class: 'hop-logo' %>
-          <h4>2020</h4>
+<div class="background-wrap">
+  <div class="bubble x1"></div>
+  <div class="bubble x2"></div>
+  <div class="bubble x3"></div>
+  <div class="bubble x4"></div>
+  <div class="bubble x5"></div>
+  <div class="bubble x6"></div>
+  <div class="bubble x7"></div>
+  <div class="bubble x8"></div>
+  <div class="bubble x9"></div>
+  <div class="bubble x10"></div>
+  <div class="bubble x11"></div>
+  <div class="bubble x12"></div>
+  <div class="bubble x13"></div>
+  <div class="bubble x14"></div>
+  <div class="log-in-btn-homepage">
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "home-search-btn-1" %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path, class: "home-search-btn-1" %>
+    <% end %>
+  </div>
+  <div class="main-container">
+    <div class="container-hop">
+      <div class="top-box text-center">
+        <div class="top-top-box">
+          <div class="home-nav d-flex justify-content-around align-items-center">
+            <h4>SINCE</h4>
+            <%= image_tag "logo.svg", class: 'hop-logo' %>
+            <h4>2020</h4>
+          </div>
+        </div>
+
+        <h1 class="box-shadow">HOP!</h1>
+        <h2 class="second-header">FIND LOCAL BEER</h2>
+        <div class="hop-it-btn-container">
+          <span class="left-square"></span>
+          <%= link_to "HOP IT!", tags_path, class: "hop-it-btn" %>
+          <span class="right-square"></span>
         </div>
       </div>
 
-      <h1 class="box-shadow">HOP!</h1>
-      <h2 class="second-header">FIND LOCAL BEER</h2>
-      <div class="hop-it-btn-container">
-        <span class="left-square"></span>
-        <%= link_to "HOP IT!", tags_path, class: "hop-it-btn" %>
-        <span class="right-square"></span>
+      <div class="bottom-box d-flex justify-content-around">
+        <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-search-btn" %>
+
+        <%= link_to "SEARCH 300 BREWS", beers_path, class: "home-search-btn" %>
+
       </div>
-    </div>
-
-    <div class="bottom-box d-flex justify-content-around">
-      <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-search-btn" %>
-
-      <%= link_to "SEARCH 300 BREWS", beers_path, class: "home-search-btn" %>
-
     </div>
   </div>
 </div>
