@@ -20,6 +20,26 @@
     width: 80%;
   }
 }
+.icons {
+  position: absolute;
+  bottom: 12px;
+  left: 15%;
+}
+
+.icon {
+  font-size: 28px;
+  display: block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: $midnight-blue;
+    &:hover {
+      color: $beige-yellow;
+    }
+}
+
+.icon a {
+  text-decoration: none;
+}
 
 .addeventatc {
   display: flex !important;
@@ -30,6 +50,7 @@
   color: $beige-base;
   padding: 6px;
   font-size: 10px;
+  margin-top: 20px;
   &:hover {
     color: blue;
   }

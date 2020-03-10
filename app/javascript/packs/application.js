@@ -78,7 +78,7 @@ const randomizer = () => {
       clearInterval(change);
       console.log(actual);
       card.classList.remove('d-none');
-      card.classList.add('delay-1s');
+      elem.classList.remove('beer-title');
     }
 
   }
