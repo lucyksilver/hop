@@ -8,7 +8,7 @@
     height: calc(100% - 183px);
     top: 138px;
     left: 0;
-    background-color: $beer-yellow;
+    background-color: $beige-base;
     border-radius: 7px;
     z-index: 0;
   }
@@ -26,7 +26,7 @@
 }
 
 .beer-right-half {
-  background-color: $beer-yellow;
+  background-color: $beige-base;
   position: relative;
   width: 50vw;
   height: 100vh;
@@ -49,24 +49,24 @@
 }
 
 .fa-heart {
-  color: $beer-brown;
+  color: $beige-bg;
 }
 
 .show-tag {
-  border: 2px solid $beer-red;
+  border: 2px solid $midnight-blue;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $beer-red;
+  color: $midnight-blue;
   font-size: 14px;
   margin-right: 4px;
 }
 
 .show-tag-active {
-  border: 2px solid $beer-brown;
-  background-color: $beer-brown;
+  border: 2px solid $beige-bg;
+  background-color: $beige-bg;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $beer-red;
+  color: $midnight-blue;
   font-size: 14px;
   margin-right: 4px;
 }
@@ -102,7 +102,7 @@
 
 .pub-card-active {
   .pub-card-image {
-    border: 3px solid $beer-brown;
+    border: 3px solid $beige-bg;
     border-radius: 8px;
     padding: 3px;
   }
@@ -129,21 +129,21 @@
 
 .show-all {
   text-decoration: none;
-  color: $beer-brown;
+  color: $beige-bg;
   opacity: 0.5;
   &:hover {
     text-decoration: none;
-    color: $beer-brown;
+    color: $beige-bg;
     opacity: 1;
   }
 }
 
 .show-btn {
   padding: 10px 50px;
-  border: 2px solid $beer-red;
-  background-color: $beer-red;
+  border: 2px solid $midnight-blue;
+  background-color: $midnight-blue;
   border-radius: 5px;
-  color: $beer-brown;
+  color: $beige-bg;
   opacity: 0.8;
   &:hover {
     opacity: 1;
