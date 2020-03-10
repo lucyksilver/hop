@@ -9,10 +9,16 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  margin-left: 8px;
+}
+
+.navbar {
+  padding: 0 0;
 }
 
 .navbar-a {
   margin-bottom: -56px;
   position: relative;
   z-index: 1;
+  padding: 0 0;
 }
