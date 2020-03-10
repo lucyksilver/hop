@@ -7,7 +7,7 @@
   margin: 0 48px;
   text-align: center;
   font-size: 24px;
-  background-color: $beige-base;
+  background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 1px 7px 15px rgba(0,0,0,0.15);
@@ -16,25 +16,17 @@
 .beers-search-bar {
   width: 80%;
   background-color: transparent !important;
+  color: $midnight-blue;
   border: none;
   outline: none;
 }
 
 input {
-  color: $beige-bg;
+  color: $midnight-blue;
 }
 
-.beers-search-btn {
-  padding: 0 25px;
-  background-color: $midnight-blue;
-  border: 2px solid $beige-bg;
-  border-radius: 5px;
-  color: $beige-bg;
-  &:hover {
-  background-color: $beige-bg;
-  border-radius: 5px;
-  color: $midnight-blue;
-  }
+.fa-search {
+  font-size: 20px;
 }
 
 .beer-cards {
@@ -99,10 +91,10 @@ input {
 }
 
 .beer-tag {
-  border: 2px solid $beige-bg;
+  border: 2px solid $beige-yellow;
   padding: 8px 16px;
   border-radius: 4px;
-  color: $beige-bg;
+  color: $beige-yellow;
 
   font-size: 14px;
   padding: 8px 16px;
@@ -171,10 +163,11 @@ input {
   border-radius: 5px;
   background-color: $midnight-blue;
   color: $beige-bg;
+  opacity: 0.9;
   &:hover {
-    background-color: $beige-bg;
-    color: $midnight-blue;
+    opacity: 1;
     text-decoration: none;
+    color: $beige-bg;
   }
 }
 
