@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container beers-index">
   <p class="text-center beers-header pt-5">PICK YOUR BREW</hp>
   <div class="beers-search">
     <form action="/beers" accept-charset="UTF-8" method="get" style="">
@@ -11,13 +11,13 @@
     <% @beers.each do |beer| %>
       <div class="beer-card scroll-reveal">
         <%= link_to "", beer_path(beer), class: "beer-card-link" %>
-        <%= cl_image_tag beer.photo.key, height: 150, width: 200, class: "beer-card-image" %>
+        <%= cl_image_tag beer.photo.key, height: 150, width: 150, class: "beer-card-image" %>
 
 
         <div class="beer-card-content">
           <div class="beer-card-title">
-            <p><%= beer.name%></p>
-            <p class="text-gray"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+            <p class="beer-card-title-content"><%= beer.name%></p>
+            <p class="beer-card-title-details"><%= (beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
 
           </div>
           <div class="beer-card-tags">
