@@ -22,16 +22,19 @@
 }
 .icons {
   position: absolute;
-  top: 90%;
+  bottom: 12px;
   left: 15%;
 }
 
 .icon {
-  font-size: 40px;
+  font-size: 28px;
   display: block;
   margin-right: 10px;
   text-decoration: none;
-
+  color: $midnight-blue;
+    &:hover {
+      color: $beige-yellow;
+    }
 }
 
 .icon a {
