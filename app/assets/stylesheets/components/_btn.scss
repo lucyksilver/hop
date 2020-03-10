@@ -5,7 +5,6 @@
   background-color: $beer-red;
   width: 100%;
   margin: 24px 0 24px 0;
-  transition-duration: 0.3s;
   &:hover {
     text-decoration: none;
     color: $beer-red;
@@ -18,16 +17,46 @@
   }
 }
 
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 .hop-it-btn-container {
-  position: relative;
   display: flex;
   align-items: center;
   width: 50%;
   margin: 0 auto;
+  transition-duration: 0.3s;
+  animation: wiggle 2s linear infinite;
+  left: calc(50% - 3em);
+  top: calc(50% - 2em);
+  transform-origin: 50% 5em;
   span {
     width: 64px;
     height: 64px;
-    background-color: $beer-yellow;
+    background-color: #FFEFD1;
     transform: rotate(45deg);
   }
   .left-square {

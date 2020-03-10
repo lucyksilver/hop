@@ -4,8 +4,8 @@
       <h1>Your Local Brew!</h1>
       <h3>Enjoy your <%= @choice.beer.name %> at <%= @choice.pub.name %></h3>
       <h4>Only <%= (Geocoder::Calculations.distance_between([@choice.pub.latitude, @choice.pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away</h4>
-      <div title="Add to Calendar" class="addeventatc">
-          Add to Calendar
+      <div title="Add to Calendar" class="addeventatc" data-styling="none">
+      <h3 class='calendar'>Add to your Calendar <%= image_tag "icon-calendar-t1.svg", width:18 %></h3>
           <span class="title">Let's have a beer!</span>
           <span class="description">Enjoy your <%= @choice.beer.name %>! Chosen by you, supported by HOP!</span>
           <span class="location"><%=@choice.pub.address %> </span>
@@ -23,4 +23,3 @@
     </div>
   </div>
 </div>
-
