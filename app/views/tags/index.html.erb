@@ -1,6 +1,6 @@
+<h2 class="beers-header-alt tags-header">WHAT'S YOUR FLAVOUR?</h2>
 <div class=tags-wrapper>
   <div class="tags-container ml-5 mr-5">
-    <h2 class="beers-header-alt tags-header mb-5">WHAT'S YOUR FLAVOUR?</h2>
     <%= simple_form_for :search, url: beers_path, method: :get do |f| %>
       <fieldset class="form-group check_boxes required search_tags">
         <input type="hidden" name="search[tags][]" value="">

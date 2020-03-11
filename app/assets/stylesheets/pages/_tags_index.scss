@@ -1,5 +1,5 @@
 .tags-container {
-  padding: 48px;
+  padding: 40px;
   background-color: $beige-base;
   border-radius: 5px;
   width: 90%;
@@ -13,6 +13,7 @@
 
 .tags-header {
   font-size: 46px;
+  margin-bottom: 30px;
   text-align: center;
   color: $midnight-blue;
   text-shadow: 3px 3px white;
@@ -50,8 +51,11 @@
 }
 
 .tag-card .form-check-label {
-  text-align: center;
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 20px;
 }
 
 .tag-btn-container {
