@@ -129,12 +129,10 @@
 
 .show-all {
   text-decoration: none;
-  color: $beige-bg;
-  opacity: 0.5;
+  color: $midnight-blue;
   &:hover {
     text-decoration: none;
     color: $beige-bg;
-    opacity: 1;
   }
 }
 
@@ -144,9 +142,7 @@
   background-color: $midnight-blue;
   border-radius: 5px;
   color: $beige-bg;
-  opacity: 0.8;
   &:hover {
-    opacity: 1;
     text-decoration: none;
   }
 }
