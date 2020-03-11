@@ -8,7 +8,7 @@
           <p class="show-header"><%= @beer.name %></p>
           <% if @beer.liked_by(current_user) %>
             <%= link_to like_path(@beer.likes.find_by(user: current_user)), method: :delete, class: "liked heart" do %>
-            <i class="fas fa-heart heart ml-4"></i>
+            <i class="fas fa-heart heart ml-3"></i>
             <% end %>
           <% else %>
             <%= link_to beer_likes_path(@beer), method: :post, class: "like heart" do%>
@@ -16,14 +16,8 @@
             <% end %>
           <% end %>
         </div>
-        <div class="mt-2 mb-4">
+        <div>
           <p class="show-description"><%= @beer.description %></p>
-          <div class="beer-card-tags">
-            <% @beer.tags.each do |tag| %>
-            <!-- add logic -->
-              <span class="show-tag-active"><%= tag.name %></span>
-            <% end %>
-          </div>
         </div>
         <div class="choice-form">
           <p class="font-heading">Choose your pub</p>

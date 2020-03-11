@@ -82,7 +82,7 @@ const randomizer = () => {
     }
 
   }
-  setInterval(change, 300);
+  setInterval(change, 200);
 }
 
 
