@@ -1,13 +1,13 @@
 <div class="choice-show-container">
   <div class="item-left-half">
-    <div class="content">
+    <div class="choice-content">
       <h1 class="pb-3">Your Local Brew!</h1>
       <p class="m-0">Enjoy your <%= @choice.beer.name %> at <%= @choice.pub.name %></p>
       <p class="m-0">Only <%= (Geocoder::Calculations.distance_between([@choice.pub.latitude, @choice.pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away</p>
 
       <div class="calendar-container mt-1 mb-4">
-        <div title="Add to Calendar" class="addeventatc" data-render="inline-buttons">
-        <p class='calendar'><i class="fas fa-calendar-check"></i></p>
+        <div title="Add to Calendar" class="addeventatc" data-render="inline-buttons" >
+        <p class="calendar"><i class="fas fa-calendar-check"></i></p>
             <span class="title">Let's have a beer!</span>
             <span class="description">Enjoy your <%= @choice.beer.name %>! Chosen by you, supported by HOP!</span>
             <span class="location"><%=@choice.pub.address %> </span>
