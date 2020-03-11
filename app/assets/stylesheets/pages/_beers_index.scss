@@ -73,7 +73,7 @@ input {
   &:before {
     content: "";
     position: absolute;
-    width: 95px;
+    width: 50px;
     height: 100%;
     top: 0;
     left: 0;
@@ -84,7 +84,7 @@ input {
 
   &:hover {
     &:before {
-      width: 35px;
+      width: 94px;
     }
   }
 }
