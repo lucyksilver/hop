@@ -5,7 +5,7 @@
   <div class="beer-right-half">
       <div class="content">
         <div class="beer-info">
-          <p><%= @beer.name %></p>
+          <p class="beers-header"><%= @beer.name %></p>
           <% if @beer.liked_by(current_user) %>
             <%= link_to like_path(@beer.likes.find_by(user: current_user)), method: :delete, class: "liked heart" do %>
             <i class="fas fa-heart ml-3"></i>

@@ -19,7 +19,6 @@
 }
 
 .beer-left-half {
-  border-right: solid 5px $midnight-blue;
   width: 50vw;
   height: 100vh;
   background-size: cover;
@@ -27,7 +26,6 @@
 }
 
 .beer-right-half {
-  border-left: solid 5px $beige-bg;
   background-color: $beige-base;
   position: relative;
   width: 50vw;
@@ -131,12 +129,10 @@
 
 .show-all {
   text-decoration: none;
-  color: $beige-bg;
-  opacity: 0.5;
+  color: $midnight-blue;
   &:hover {
     text-decoration: none;
     color: $beige-bg;
-    opacity: 1;
   }
 }
 
@@ -146,9 +142,7 @@
   background-color: $midnight-blue;
   border-radius: 5px;
   color: $beige-bg;
-  opacity: 0.8;
   &:hover {
-    opacity: 1;
     text-decoration: none;
   }
 }
