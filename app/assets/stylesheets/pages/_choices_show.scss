@@ -3,7 +3,7 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .choice-show-container {
@@ -35,7 +35,6 @@ p {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-
 .icons {
 
   bottom: 12px;
@@ -62,6 +61,16 @@ p {
   justify-content: center;
 }
 
+.calendar {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+i {
+  font-size: 24px;
+}
+
 .addeventatc {
   display: flex !important;
   border: 1px solid black;
@@ -70,8 +79,8 @@ p {
   border-radius: 3px;
   color: $beige-base;
   padding: 6px;
-  font-size: 10px;
-  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: 24px;
   &:hover {
     color: blue;
   }
@@ -81,9 +90,6 @@ p {
 
   }
 
-  .calendar i {
-    font-size: 16px;
-  }
 
   #addeventatc1-drop {
 
@@ -97,8 +103,8 @@ p {
 .addeventatc .start, .addeventatc .end, .addeventatc .timezone, .addeventatc .title, .addeventatc .description, .addeventatc .location, .addeventatc .organizer, .addeventatc .organizer_email, .addeventatc .facebook_event, .addeventatc .all_day_event, .addeventatc .date_format, .addeventatc .alarm_reminder, .addeventatc .recurring, .addeventatc .attendees, .addeventatc .calname, .addeventatc .uid, .addeventatc .status, .addeventatc .method, .addeventatc .client, .addeventatc .transp {display:none!important;}
 
 /* The drop down */
-.addeventatc_dropdown           {position:relative;text-align:left;display:block!important;left:auto!important;top:auto!important;text-decoration:none;font-size:16px;}
-.addeventatc_dropdown span        {display:inline-block;position:relative;line-height:110%;text-decoration:none;font-size:16;color: $beige-yellow;cursor:pointer;padding:14px 14px 8px 12px;margin:0px 5px 0px 0px;}
+.addeventatc_dropdown           {position:relative;text-align:left;display:block!important;left:auto!important;top:auto!important;text-decoration:none;font-size:14px;}
+.addeventatc_dropdown span        {display:inline-block;position:relative;line-height:110%;text-decoration:none;font-size:16;color: $beige-yellow;cursor:pointer;padding: 8px 16px;}
 .addeventatc_dropdown span:hover    {text-decoration:none; color: $beige-base;}
 .addeventatc_dropdown span:active     {top:0px;}
 .addeventatc_dropdown em        {font-weight:400;color:#888;font-size:12px;display:none;}
