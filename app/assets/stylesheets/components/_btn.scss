@@ -5,6 +5,7 @@
   background-color: $midnight-blue;
   width: 100%;
   margin: 24px 0 24px 0;
+  transition: 0.3s;
   &:hover {
     text-decoration: none;
     color: $midnight-blue;
@@ -86,14 +87,12 @@
 }
 
 .home-search-btn {
-  padding: 15px;
   margin: 10px;
   background-color: $beige-yellow;
   text-decoration: none;
   color: $charcoal;
-  border: 3px solid $beige-bg;
   border-radius: 3px;
-  padding: 5px;
+  padding: 10px;
   transition: 0.3s;
   &:hover {
     color: $midnight-blue;
@@ -105,18 +104,17 @@
 .home-search-btn-1 {
   padding: 15px;
   margin: 10px;
-  background-color: $beige-yellow;
+  background-color: transparent;
   text-decoration: none;
-  color: $charcoal;
-  border: 3px solid $beige-base;
-  border-radius: 3px;
-  padding: 5px;
+  font-family: $headers-font;
+  font-size: 16px;
+  color: $midnight-blue;
+  padding: 5px 10px;
   transition: 0.3s;
   &:hover {
     color: $midnight-blue;
     text-decoration: none;
-    border: 3px solid transparent;
-    background-color: $beige-yellow;
+    font-size: 18px;
   }
 }
 
