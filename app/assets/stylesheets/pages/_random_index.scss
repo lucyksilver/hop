@@ -7,6 +7,11 @@
 .random-container {
   max-width: 550px;
   margin: 0 auto;
+
+}
+
+.random-wrapper {
+  height: 90vh;
 }
 
 .random-cards {
@@ -51,5 +56,8 @@
 
 .beer-title {
   font-size: 80px;
-  margin-top: 200px;
+}
+
+.beer-header {
+  font-size: 62px;
 }

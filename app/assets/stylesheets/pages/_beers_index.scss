@@ -1,5 +1,10 @@
 .beers-header {
-  font-size: 32px;
+  font-size: 52px;
+  font-family: $headers-font;
+  text-shadow: 2.5px 2.5px 0px $beige-base;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 0;
 }
 
 .beers-search {

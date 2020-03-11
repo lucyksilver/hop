@@ -1,24 +1,26 @@
-<div class="random-container text-center">
-  <h2 class= "text-center beer-header beer-title" id="randomBeer" data-actual-beer="<%= @random_beer.name %>" data-beers="<%= @beers.map { |beer| beer.name } %>"></h2>
-    <div class="random-cards text-center">
+<div class='random-wrapper d-flex justify-content-center align-items-center'>
 
-      <div class="random-card d-none fadeIn" id="card">
-        <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
-        <div class= "random-image" >
-           <%= cl_image_tag @random_beer.photo.key, width: 200, class: "random-card-img" %>
+    <div class="random-container text-center">
+      <h2 class= "text-center beer-header beer-title" id="randomBeer" data-actual-beer="<%= @random_beer.name %>" data-beers="<%= @beers.map { |beer| beer.name } %>"></h2>
+        <div class="random-cards text-center">
+
+          <div class="random-card d-none fadeIn" id="card">
+            <%= link_to "", beer_path(@random_beer), class: "beer-card-link" %>
+            <div class= "random-image" >
+               <%= cl_image_tag @random_beer.photo.key, width: 200, class: "random-card-img" %>
 
 
+            </div>
+            <div class="random-card-content">
+              <p class="text-gray"><%= (@random_beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
+              <% @random_beer.tags.each do |tag| %>
+                <span class="beer-tag beer-active-tag"><%= tag.name %></span>
+              <% end %>
+            </div>
+          </div>
         </div>
-        <div class="random-card-content">
-          <p><%= @random_beer.name%></p>
-          <p class="text-gray"><%= (@random_beer.closest_distance(current_user) * 1.2).round(2) %> miles away</p>
-          <% @random_beer.tags.each do |tag| %>
-            <span class="beer-tag beer-active-tag"><%= tag.name %></span>
-          <% end %>
+        <div class="text-center">
+          <%= link_to "RANDOMISE!", random_beers_path, class: "beers-btn" %>
         </div>
-      </div>
-    </div>
-    <div class="text-center">
-      <%= link_to "RANDOMISE!", random_beers_path, class: "beers-btn" %>
     </div>
 </div>
