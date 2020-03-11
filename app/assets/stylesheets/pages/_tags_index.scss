@@ -2,13 +2,20 @@
   padding: 48px;
   background-color: $beige-base;
   border-radius: 5px;
+  width: 90%;
+}
+
+.tags-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tags-header {
-  font-size: 32px;
+  font-size: 46px;
   text-align: center;
-  color: $beige-yellow;
-  background-color: $midnight-blue;
+  color: $midnight-blue;
+  text-shadow: 3px 3px white;
   border-radius: 4px;
 }
 
