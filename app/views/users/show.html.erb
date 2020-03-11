@@ -5,8 +5,7 @@
       <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
         <h2>Brews you've discovered!</h2>
         <% if @user.choices.count > 3 %>
-          <a id="show-all-btn" class="show-all-btn" data-toggle="collapse" href="#collapseChoices" role="button" aria-expanded="false" aria-controls="collapseChoices">
-
+          <a class="show-all-btn" data-toggle="collapse" href="#collapseChoices" role="button" aria-expanded="false" aria-controls="collapseChoices">
           </a>
         <% end %>
       </div>
@@ -14,18 +13,13 @@
         <% @first_three.each do |choice| %>
           <div class="beer-card">
             <%= link_to "", beer_path(choice.beer), class: "beer-card-link" %>
-             <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
+            <%= cl_image_tag choice.beer.photo.key, height: 150, width: 150, class: "beer-card-image" %>
             <div class="beer-card-content">
-              <div class="beer-card-title">
-                <p><%= choice.beer.name%></p>
-              </div>
-              <div class="beer-card-tags">
-                <% choice.beer.tags.each do |tag| %>
-                  <!-- logic to do later (Arthur) -->
-                  <span class="beer-active-tag"><%= tag.name %></span>
-                <% end %>
+              <div class="show-card-title">
+                  <p><%= choice.beer.name%></p>
               </div>
             </div>
+
           </div>
         <% end %>
 
@@ -33,17 +27,12 @@
             <% @remainder.each do |choice| %>
               <div class="collapse beer-card" id="collapseChoices">
                 <%= link_to "", beer_path(choice.beer), class: "beer-card-link" %>
-                <%= cl_image_tag choice.beer.photo.key, class: "beer-card-img" %>
+                <%= cl_image_tag choice.beer.photo.key, height: 150, width: 150, class: "beer-card-image" %>
                 <div class="beer-card-content">
-                  <div class="beer-card-title">
-                    <p><%= choice.beer.name%></p>
-                  </div>
-                  <div class="beer-card-tags">
-                    <% choice.beer.tags.each do |tag| %>
-                      <!-- logic to do later (Arthur) -->
-                      <span class="beer-active-tag"><%= tag.name %></span>
-                    <% end %>
-                  </div>
+                    <div class="show-card-title">
+                      <p><%= choice.beer.name%></p>
+                    </div>
+
                 </div>
               </div>
             <% end %>
@@ -55,7 +44,7 @@
       <div class="choice-titles-buttons d-flex align-items-center justify-content-between">
         <h2>Brews you've liked!</h2>
         <% if @user.likes.count > 3 %>
-          <a id="show-all-btn" class="show-all-btn" data-toggle="collapse" href="#collapseLikes" role="button" aria-expanded="false" aria-controls="collapseLikes">
+          <a class="show-all-btn" data-toggle="collapse" href="#collapseLikes" role="button" aria-expanded="false" aria-controls="collapseLikes">
 
           </a>
         <% end %>
@@ -64,17 +53,12 @@
         <% @first_three_likes.each do |like| %>
           <div class="beer-card">
             <%= link_to "", beer_path(like.beer), class: "beer-card-link" %>
-            <%= cl_image_tag like.beer.photo.key, class: "beer-card-img" %>
+            <%= cl_image_tag like.beer.photo.key, height: 150, width: 150, class: "beer-card-image" %>
             <div class="beer-card-content">
-              <div class="beer-card-title">
+              <div class="show-card-title">
                 <p><%= like.beer.name%></p>
               </div>
-              <div class="beer-card-tags">
-                <% like.beer.tags.each do |tag| %>
-                  <!-- logic to do later (Arthur) -->
-                  <span class="beer-active-tag"><%= tag.name %></span>
-                <% end %>
-              </div>
+
             </div>
           </div>
         <% end %>
@@ -83,17 +67,12 @@
             <% @remainder_likes.each do |like| %>
               <div class="collapse beer-card" id="collapseLikes">
                 <%= link_to "", beers_path(like.beer), class: "beer-card-link" %>
-                <%= cl_image_tag like.beer.photo.key, class: "beer-card-img" %>
+                <%= cl_image_tag like.beer.photo.key, height: 150, width: 150, class: "beer-card-image" %>
                 <div class="beer-card-content">
-                  <div class="beer-card-title">
+                  <div class="show-card-title">
                     <p><%= like.beer.name%></p>
                   </div>
-                  <div class="beer-card-tags">
-                    <% like.beer.tags.each do |tag| %>
-                      <!-- logic to do later (Arthur) -->
-                      <span class="beer-active-tag"><%= tag.name %></span>
-                    <% end %>
-                  </div>
+
                 </div>
               </div>
             <% end %>
@@ -115,9 +94,9 @@
       <% if  @user.choices.count < 10 %>
         <p>Newbie</p>
       <% elsif  @user.choices.count < 25 %>
-        <p>Beginner</p>
+        <p>Taster</p>
       <% elsif  @user.choices.count < 50 %>
-        <p>Master</p>
+        <p>Connoisseur</p>
       <% elsif  @user.choices.count > 99 %>
         <p>Expert</p>
       <% end %>

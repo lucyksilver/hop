@@ -6,21 +6,27 @@
   justify-content: flex-start;
 }
 
+h2 {
+  text-shadow: 1.5px 1.5px 0px $beige-bg;
+}
+
 .profile-left {
   padding-top: 48px;
 }
 
 .show-all-btn {
+  width: 80px;
+  text-align: center;
   padding: 4px 16px;
   border-radius: 4px;
   font-size: 20px;
   text-decoration: none;
   background-color: $midnight-blue;
-  color: $beige-bg;
+  color: $beige-base;
   transition: 0.3s;
   &:hover {
     background-color: $midnight-blue;
-    color: $beige-bg;
+    color: $beige-base;
     text-decoration: none;
   }
 }
@@ -59,9 +65,8 @@
 }
 
 .badges {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 4px;
+  display: flex;
+  justify-content: space-between;
   font-size: 24px;
 }
 
@@ -85,3 +90,7 @@ li {
   text-align: center;
 }
 
+.show-card-title {
+  font-size: 24px;
+  text-align: right;
+}
