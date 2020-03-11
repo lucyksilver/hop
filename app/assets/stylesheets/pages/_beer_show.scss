@@ -28,11 +28,13 @@
 
 .beer-show-container {
   display: flex;
+  height: 100vh;
 }
 
 .beer-left-half {
   width: 40vw;
-  height: 100vh;
+  height: 100%;
+
   background-size: cover;
   background-position: center;
 
@@ -42,10 +44,13 @@
   background-color: $beige-bg;
   position: relative;
   width: 60vw;
-  height: 100vh;
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 60px;
+
   .content {
     width: 80%;
   }
