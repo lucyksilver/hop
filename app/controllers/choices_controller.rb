@@ -12,7 +12,7 @@ class ChoicesController < ApplicationController
           lat: @pub.latitude,
           lng: @pub.longitude,
           infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
-          image_url: helpers.asset_url('beer_icon_2.png')
+          image_url: helpers.asset_url('logo.svg')
         }, {
           lat: current_user.latitude,
           lng: current_user.longitude,
@@ -25,7 +25,7 @@ class ChoicesController < ApplicationController
           lat: @pub.latitude,
           lng: @pub.longitude,
           infoWindow: render_to_string(partial: "info_window_pub", locals: { pub: @pub }),
-          image_url: helpers.asset_url('beer_icon_2.png')
+          image_url: helpers.asset_url('logo.svg')
         }, {
           lat: current_user.latitude,
           lng: current_user.longitude,
