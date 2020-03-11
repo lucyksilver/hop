@@ -8,7 +8,7 @@
           <p class="show-header"><%= @beer.name %></p>
           <% if @beer.liked_by(current_user) %>
             <%= link_to like_path(@beer.likes.find_by(user: current_user)), method: :delete, class: "liked heart" do %>
-            <i class="fas fa-heart ml-4 mt-5"></i>
+            <i class="fas fa-heart heart ml-4"></i>
             <% end %>
           <% else %>
             <%= link_to beer_likes_path(@beer), method: :post, class: "like heart" do%>
