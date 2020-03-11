@@ -1,18 +1,49 @@
 .profile-container {
+  margin: 16px;
+  background-color: #FFEFD0;
+  border-radius: 5px;
   display: flex;
   justify-content: flex-start;
 }
 
+.profile-left {
+  padding-top: 48px;
+}
+
+.show-all-btn {
+  padding: 4px 16px;
+  border-radius: 4px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: $midnight-blue;
+  color: $beige-bg;
+  transition: 0.3s;
+  &:hover {
+    background-color: $midnight-blue;
+    color: $beige-bg;
+    text-decoration: none;
+  }
+}
+
+.show-all-btn[aria-expanded="false"]:before{
+  content:"View all";
+}
+
+.show-all-btn[aria-expanded="true"]:before{
+  content:"Hide";
+}
+
 .profile-right {
+  padding: 48px;
   position: sticky;
-  top: 50px;
+  top: 0;
   width: 25%;
   height: 500px;
 }
 
 .profile-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .user-avatar {
@@ -38,8 +69,8 @@
   width: 50px;
   height: 50px;
   padding: 8px;
-  background-color: $beige-yellow;
-  color: $midnight-blue;
+  background-color: $midnight-blue;
+  color: $beige-yellow;
   border-radius: 50%;
   text-align: center;
 }
