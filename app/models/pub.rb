@@ -8,4 +8,13 @@ class Pub < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  before_save :check_validation
+
+
+  def check_validation
+    if self.latitude == nil
+      self.latitude = 51.531662
+      self.longitude = -0.0770283
+    end
+  end
 end
