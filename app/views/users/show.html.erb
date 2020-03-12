@@ -94,9 +94,9 @@
       <% if  @user.choices.count < 10 %>
         <p>Newbie</p>
       <% elsif  @user.choices.count < 25 %>
-        <p>Taster</p>
-      <% elsif  @user.choices.count < 50 %>
         <p>Connoisseur</p>
+      <% elsif  @user.choices.count < 50 %>
+        <p>Beer Master</p>
       <% elsif  @user.choices.count > 99 %>
         <p>Expert</p>
       <% end %>

@@ -1,5 +1,7 @@
 .profile-container {
   margin: 16px;
+  padding-right: 48px;
+  padding-left: 48px;
   background-color: #FFEFD0;
   border-radius: 5px;
   display: flex;
@@ -7,7 +9,7 @@
 }
 
 h2 {
-  text-shadow: 1.5px 1.5px 0px $beige-bg;
+  text-shadow: 1.5px 1.5px 0px $beige-yellow;
 }
 
 .profile-left {
@@ -15,7 +17,7 @@ h2 {
 }
 
 .show-all-btn {
-  width: 80px;
+  width: 96px;
   text-align: center;
   padding: 4px 16px;
   border-radius: 4px;
@@ -40,6 +42,7 @@ h2 {
 }
 
 .profile-right {
+  margin-top: 96px;
   padding: 48px;
   position: sticky;
   top: 0;
