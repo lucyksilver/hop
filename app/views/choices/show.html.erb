@@ -1,33 +1,49 @@
 <div class="choice-show-container">
-  <div class="item-left-half">
-    <div class="choice-content">
+    <div class="item-left-half">
+  <div class ="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+    <div class="bubble x11"></div>
+    <div class="bubble x12"></div>
+    <div class="bubble x13"></div>
+    <div class="bubble x14"></div>
+      <div class="choice-content">
         <h1 class="pb-3">Your Local Brew</h1>
         <p class="m-0">Enjoy your <%= @choice.beer.name %> at <%= @choice.pub.name %>!</p>
         <p class="m-0">Only <%= (Geocoder::Calculations.distance_between([@choice.pub.latitude, @choice.pub.longitude],[current_user.latitude, current_user.longitude]) * 1.2).round(2) %> miles away</p>
 
-      <div  class="calendar">
-        <i class="fas fa-calendar-check"></i>
-      </div>
-      <div class="calendar-container">
-        <div title="Add to Calendar" class="addeventatc" data-render="inline-buttons" >
+        <div  class="calendar">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="calendar-container">
+          <div title="Add to Calendar" class="addeventatc" data-render="inline-buttons" >
             <span class="title">Let's have a beer!</span>
             <span class="description">Enjoy your <%= @choice.beer.name %>! Chosen by you, supported by HOP!</span>
             <span class="location"><%=@choice.pub.address %> </span>
+          </div>
         </div>
-      </div>
 
-      <div class='icons'>
-        <p>Share with friends!</p>
-        <div class= 'd-flex justify-content-center'>
+        <div class='icons'>
+          <p>Share with friends!</p>
+          <div class= 'd-flex justify-content-center'>
             <%= link_to "http://www.facebook.com/sharer/sharer.php?u=#{choice_url(@choice)}&t=#{@choice.beer.name}", target: "_blank" do %>
             <i class="fab fa-facebook-f icon"></i>
-          <% end %>
+            <% end %>
             <%= link_to "https://twitter.com/intent/tweet?text=#{choice_url(@choice)}&url=#{@choice.beer.name}", target: "_blank" do %>
             <i class="fab fa-twitter icon"></i>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
@@ -35,12 +51,12 @@
 
   <div class="item-right-half d-flex align-items-center justify-content-center">
     <div id="map"
-       style="
-       border-radius: 0px;
-       width: 100%;
-       height: 100vh;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+    style="
+    border-radius: 0px;
+    width: 100%;
+    height: 100vh;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+</div>
 </div>

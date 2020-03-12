@@ -14,12 +14,12 @@ p {
 }
 
 .item-right-half {
-  width: 50%;
+  width: 40%;
   height: 100vh;
 }
 
 .item-left-half {
-  width: 50%;
+  width: 60%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,10 +28,9 @@ p {
 
 .choice-content {
   text-align: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 48px;
+
   border-radius: 4px;
-  width: 70%;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
