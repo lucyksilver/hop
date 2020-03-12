@@ -12,7 +12,6 @@ const randomizer = () => {
       counter++;
     } else if (counter === beers.length) {
       clearInterval(change);
-      console.log(actual);
       card.classList.remove('d-none');
       elem.classList.remove('beer-title');
     }
