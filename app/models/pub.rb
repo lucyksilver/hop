@@ -17,4 +17,7 @@ class Pub < ApplicationRecord
       self.longitude = -0.0770283
     end
   end
+
+  def distance_from_user
+  end
 end

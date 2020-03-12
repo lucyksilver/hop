@@ -1,8 +1,8 @@
 <%= simple_form_for [beer, choice] do |f| %>
   <% if params[:view_all] %>
-    <% array_of_pubs = beer.pubs %>
+    <% array_of_pubs = pubs %>
   <% else %>
-    <% array_of_pubs = beer.pubs.sample(3) %>
+    <% array_of_pubs = pubs.first(3) %>
   <% end %>
 
   <fieldset class="form-group radio_buttons optional choice_pub_id">
