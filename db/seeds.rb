@@ -37,7 +37,8 @@ pilsner = Tag.create!(name: "Pilsner", description: "pilsner")
 ale = Tag.create!(name: "Ale", description: "ale")
 stout = Tag.create!(name: "Stout", description: "stout")
 wheat_beer = Tag.create!(name: "Wheat Beer", description: "Wheat")
-p wheat_beer
+
+
 file_b1 = URI.open('https://images.unsplash.com/photo-1566633806327-68e152aaf26d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
 beer_1 = Beer.new(name: "Lucy's Lager", description: "Light and fresh")
 beer_1.photo.attach(io: file_b1, filename: 'nes.png', content_type: 'image/png')
@@ -132,6 +133,8 @@ pub_4 = Pub.new(name: "The glitter horse", description:"wonderful pub", address:
 pub_4.photo.attach(io: file_4, filename: 'nes.png', content_type: 'image/png')
 pub_4.save!
 p pub_4
+
+
 pb1 = PubBeer.create!(pub_id: pub_1.id, beer_id: beer_1.id)
 pb2 = PubBeer.create!(pub_id: pub_2.id, beer_id: beer_1.id)
 pb3 = PubBeer.create!(pub_id: pub_3.id, beer_id: beer_1.id)
