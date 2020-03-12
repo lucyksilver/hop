@@ -1,11 +1,9 @@
 .profile-container {
   margin: 16px;
-  padding-right: 48px;
-  padding-left: 48px;
   background-color: #FFEFD0;
   border-radius: 5px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 h2 {
@@ -14,6 +12,7 @@ h2 {
 
 .profile-left {
   padding-top: 48px;
+  width: 75%;
 }
 
 .show-all-btn {
