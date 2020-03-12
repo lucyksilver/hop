@@ -1,24 +1,26 @@
-<h2 class="beers-header-alt tags-header">WHAT'S YOUR FLAVOUR?</h2>
-<div class=tags-wrapper>
-  <div class="tags-container ml-5 mr-5">
-    <%= simple_form_for :search, url: beers_path, method: :get do |f| %>
-      <fieldset class="form-group check_boxes required search_tags">
-        <input type="hidden" name="search[tags][]" value="">
-        <div class="tags-form-group">
-        <% @tags.each do |tag| %>
-          <div class="tag-card scroll-reveal-tag">
-            <input class="d-none" type="checkbox" value="<%= tag.id %>" name="search[tags][]" id="search_tags_<%= tag.id %>">
-            <label class="form-check-label collection_check_boxes" for="search_tags_<%= tag.id %>"><%= tag.name %></label>
+<div class="big-tags-wrapper">
+  <div class=tags-wrapper>
+  <h2 class="beers-header-alt tags-header">WHAT'S YOUR FLAVOUR?</h2>
+    <div class="tags-container ml-5 mr-5">
+      <%= simple_form_for :search, url: beers_path, method: :get do |f| %>
+        <fieldset class="form-group check_boxes required search_tags">
+          <input type="hidden" name="search[tags][]" value="">
+          <div class="tags-form-group">
+          <% @tags.each do |tag| %>
+            <div class="tag-card scroll-reveal-tag">
+              <input class="d-none" type="checkbox" value="<%= tag.id %>" name="search[tags][]" id="search_tags_<%= tag.id %>">
+              <label class="form-check-label collection_check_boxes" for="search_tags_<%= tag.id %>"><%= tag.name %></label>
+            </div>
+          <% end %>
           </div>
-        <% end %>
-        </div>
-      </fieldset>
-      <div class="tag-btn-container scroll-reveal-tag mt-5">
+        </fieldset>
+        <div class="tag-btn-container scroll-reveal-tag mt-4">
 
-        <span class="left-square"></span>
-        <input class="tag-btn" type="submit" name="commit" value="HOP IT!" data-disable-with="Save Search">
-        <span class="right-square"></span>
-      </div>
-    <% end %>
+          <span class="left-square"></span>
+          <input class="tag-btn" type="submit" name="commit" value="HOP IT!" data-disable-with="Save Search">
+          <span class="right-square"></span>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

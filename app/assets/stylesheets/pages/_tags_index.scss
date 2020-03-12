@@ -1,5 +1,5 @@
 .tags-container {
-  padding: 40px;
+  padding: 30px;
   background-color: $beige-base;
   border-radius: 5px;
   width: 90%;
@@ -9,10 +9,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 88vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.big-tags-wrapper {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
 }
 
 .tags-header {
+  margin-bottom: 10px;
   font-size: 46px;
   text-align: center;
   color: $midnight-blue;
@@ -23,7 +31,7 @@
 .tags-form-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 32px;
+  grid-gap: 25px;
 
 }
 
