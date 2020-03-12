@@ -22,12 +22,21 @@ class BeersController < ApplicationController
   def show
     @beer = Beer.find(params[:id])
     @choice = Choice.new
+    @pubs = @beer.pubs.sort_by { |pub| near_pub(pub) }
   end
 
   def random
     @beers = Beer.all.sample(15)
     @random_beer = Beer.all.sample
   end
+
+  private
+
+  def near_pub(pub)
+    Geocoder::Calculations.distance_between([pub.latitude, pub.longitude],[current_user.latitude, current_user.longitude])
+  end
+
+
 
 end
 
