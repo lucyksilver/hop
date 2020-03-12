@@ -54,7 +54,7 @@ document.addEventListener('turbolinks:load', () => {
   //       bottom: 0,
   //       left: 0,
   //   },
-});
+  });
   randomizer();
 })
 
