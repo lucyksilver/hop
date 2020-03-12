@@ -21,8 +21,6 @@
   font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 0;
-  color: $midnight-blue;
-  margin-top: 30px;
 
 }
 
@@ -67,7 +65,8 @@
 }
 
 .fa-heart {
-  color: $beige-bg;
+  color: $midnight-blue;
+  margin-left: 24px;
 }
 
 .show-tag {
@@ -112,6 +111,7 @@
     bottom: 0;
   }
   .pub-card-image {
+    border: 3px solid $beige-base;
     transition: .3s;
     padding: 3px;
     margin-bottom: 16px;
@@ -163,6 +163,7 @@
     color: $midnight-blue;
   &:hover {
     text-decoration: none;
+    border: 2px solid $midnight-blue;
     background-color: $midnight-blue;
     color: $beige-bg;
 
@@ -172,13 +173,13 @@
 
 .show-description {
   color: $beige-base;
-  padding: 10px;
-
+  padding: 10px 0;
+  line-height: 95%;
 }
 
 .heart {
   position: relative;
-  top:20px;
+  top: 6px;
   color: $midnight-blue;
 }
 
