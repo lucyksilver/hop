@@ -67,7 +67,8 @@
 }
 
 .fa-heart {
-  color: $beige-bg;
+  color: $midnight-blue;
+  margin-left: 24px;
 }
 
 .show-tag {
@@ -112,6 +113,7 @@
     bottom: 0;
   }
   .pub-card-image {
+    border: 3px solid $beige-base;
     transition: .3s;
     padding: 3px;
     margin-bottom: 16px;
@@ -163,6 +165,7 @@
     color: $midnight-blue;
   &:hover {
     text-decoration: none;
+    border: 2px solid $midnight-blue;
     background-color: $midnight-blue;
     color: $beige-bg;
 
@@ -172,7 +175,7 @@
 
 .show-description {
   color: $beige-base;
-  padding: 10px;
+  padding: 10px 0;
 
 }
 
