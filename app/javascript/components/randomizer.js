@@ -17,7 +17,7 @@ const randomizer = () => {
     }
 
   }
-  setInterval(change, 200);
+  setInterval(change, 100);
 }
 
 export { randomizer }
