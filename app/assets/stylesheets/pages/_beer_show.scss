@@ -21,8 +21,6 @@
   font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 0;
-  color: $midnight-blue;
-  margin-top: 30px;
 
 }
 
@@ -176,12 +174,12 @@
 .show-description {
   color: $beige-base;
   padding: 10px 0;
-
+  line-height: 95%;
 }
 
 .heart {
   position: relative;
-  top:20px;
+  top: 6px;
   color: $midnight-blue;
 }
 
