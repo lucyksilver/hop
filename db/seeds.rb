@@ -303,7 +303,7 @@ BeerTag.create!(beer: beer_29, tag: sweet);
 BeerTag.create!(beer: beer_29, tag: fruity);
 BeerTag.create!(beer: beer_29, tag: ale);
 
-file_b30 = URI.open('https://www.toastale.com/wp-content/uploads/APA_transparent_LR-896x1024.png')
+file_b30 = URI.open('https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/62122703_1982299635203189_7443600334569603072_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_oc=AQmzgkLBVtP39OADOizAdLvUvJ8llLKZUM_-uGkVTp7A-urbF4IPX2Ih0o9ZxiIJ7fg&_nc_ht=scontent-lht6-1.xx&oh=3cb74350a038d928500479fe8f0a8735&oe=5E911FB3')
 beer_30 = Beer.new(name: "American Pale Ale", description: "Passionfruit and citrus aromas with a refreshing finish.")
 beer_30.photo.attach(io: file_b30, filename: 'nes.png', content_type: 'image/png')
 beer_30.save!
