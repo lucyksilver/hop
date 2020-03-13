@@ -21,6 +21,7 @@ require("channels")
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
+import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { pubSelection } from '../components/pub_selection';
 import { tagSelection } from '../components/tag_selection';
@@ -32,36 +33,22 @@ document.addEventListener('turbolinks:load', () => {
   pubSelection();
   tagSelection();
   ScrollReveal().reveal('.scroll-reveal', {
-  delay: 150,
-  // origin: 'top',
-  distance: '-30px',
-  interval: 150,
-  // viewOffset: {
-  //       top: 100,
-  //       right: 0,
-  //       bottom: 0,
-  //       left: 0,
-  //   },
-});
+    delay: 150,
+    distance: '-30px',
+    interval: 150
+
+  });
   ScrollReveal().reveal('.scroll-reveal-tag', {
-  delay: 50,
-  // origin: 'top',
-  distance: '-30px',
-  interval: 10,
-  // viewOffset: {
-  //       top: 100,
-  //       right: 0,
-  //       bottom: 0,
-  //       left: 0,
-  //   },
+    delay: 50,
+    distance: '-30px',
+    interval: 10
   });
   randomizer();
-})
+});
 
 
 
 
-import "bootstrap";
 
 // const randomizer = () => {
 //   let counter = 0;
