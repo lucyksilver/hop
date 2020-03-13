@@ -258,7 +258,7 @@ BeerTag.create!(beer: beer_24, tag: gluten_free);
 BeerTag.create!(beer: beer_24, tag: hoppy);
 BeerTag.create!(beer: beer_24, tag: blonde);
 
-file_b25 = URI.open('https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/67483735_2347431858626719_8553339147060772864_o.jpg?_nc_cat=107&_nc_sid=da1649&_nc_ohc=S2GUgRNO26IAX8AA9m1&_nc_ht=scontent-lhr8-1.xx&oh=fdf701655c327e801896efab2ecadddc&oe=5E8FC8F2')
+file_b25 = URI.open('https://www.brewdog.com/media/catalog/product/cache/972c69a2cdba59717b1eb141eb91c8b3/n/a/nanny_state.jpg')
 beer_25 = Beer.new(name: "Nanny State", description: "A brigade of speciality malts and North American hops sends bitterness to the brink and back. Squeezing this many hops in, and the alcohol out, is a testament to our craft. Nanny State - no compromise, no surrender, no alcohol.")
 beer_25.photo.attach(io: file_b25, filename: 'nes.png', content_type: 'image/png')
 beer_25.save!
