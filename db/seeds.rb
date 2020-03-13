@@ -285,7 +285,7 @@ BeerTag.create!(beer: beer_27, tag: pilsner);
 BeerTag.create!(beer: beer_27, tag: lager);
 BeerTag.create!(beer: beer_27, tag: fresh);
 
-file_b28 = URI.open('https://www.toastale.com/wp-content/uploads/Pale_transparent_LR-896x1024.png')
+file_b28 = URI.open('https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/83001547_2544806442474431_4014028631855595520_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_oc=AQlHuf2Q-rJkaRWePjvEhW5H5hAxpLz88bxJ-grCPfTslvqrAg_fbAfD5AIfIcEhciQ&_nc_ht=scontent-lhr8-1.xx&oh=37a0e989b8fdff3c5ff3773eaf7caf09&oe=5E8F73A7')
 beer_28 = Beer.new(name: "Toast Pale Ale", description: "Golden with a smooth finish and hints of caramel & citrus.")
 beer_28.photo.attach(io: file_b28, filename: 'nes.png', content_type: 'image/png')
 beer_28.save!
