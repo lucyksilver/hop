@@ -258,7 +258,7 @@ BeerTag.create!(beer: beer_24, tag: gluten_free);
 BeerTag.create!(beer: beer_24, tag: hoppy);
 BeerTag.create!(beer: beer_24, tag: blonde);
 
-file_b25 = URI.open('https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/67483735_2347431858626719_8553339147060772864_o.jpg?_nc_cat=107&_nc_sid=da1649&_nc_ohc=S2GUgRNO26IAX8AA9m1&_nc_ht=scontent-lhr8-1.xx&oh=fdf701655c327e801896efab2ecadddc&oe=5E8FC8F2')
+file_b25 = URI.open('https://www.brewdog.com/media/catalog/product/cache/972c69a2cdba59717b1eb141eb91c8b3/n/a/nanny_state.jpg')
 beer_25 = Beer.new(name: "Nanny State", description: "A brigade of speciality malts and North American hops sends bitterness to the brink and back. Squeezing this many hops in, and the alcohol out, is a testament to our craft. Nanny State - no compromise, no surrender, no alcohol.")
 beer_25.photo.attach(io: file_b25, filename: 'nes.png', content_type: 'image/png')
 beer_25.save!
@@ -285,7 +285,7 @@ BeerTag.create!(beer: beer_27, tag: pilsner);
 BeerTag.create!(beer: beer_27, tag: lager);
 BeerTag.create!(beer: beer_27, tag: fresh);
 
-file_b28 = URI.open('https://www.toastale.com/wp-content/uploads/Pale_transparent_LR-896x1024.png')
+file_b28 = URI.open('https://scontent-lhr8-1.xx.fbcdn.net/v/t1.0-9/83001547_2544806442474431_4014028631855595520_n.jpg?_nc_cat=110&_nc_sid=110474&_nc_oc=AQlHuf2Q-rJkaRWePjvEhW5H5hAxpLz88bxJ-grCPfTslvqrAg_fbAfD5AIfIcEhciQ&_nc_ht=scontent-lhr8-1.xx&oh=37a0e989b8fdff3c5ff3773eaf7caf09&oe=5E8F73A7')
 beer_28 = Beer.new(name: "Toast Pale Ale", description: "Golden with a smooth finish and hints of caramel & citrus.")
 beer_28.photo.attach(io: file_b28, filename: 'nes.png', content_type: 'image/png')
 beer_28.save!
@@ -303,7 +303,7 @@ BeerTag.create!(beer: beer_29, tag: sweet);
 BeerTag.create!(beer: beer_29, tag: fruity);
 BeerTag.create!(beer: beer_29, tag: ale);
 
-file_b30 = URI.open('https://www.toastale.com/wp-content/uploads/APA_transparent_LR-896x1024.png')
+file_b30 = URI.open('https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/62122703_1982299635203189_7443600334569603072_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_oc=AQmzgkLBVtP39OADOizAdLvUvJ8llLKZUM_-uGkVTp7A-urbF4IPX2Ih0o9ZxiIJ7fg&_nc_ht=scontent-lht6-1.xx&oh=3cb74350a038d928500479fe8f0a8735&oe=5E911FB3')
 beer_30 = Beer.new(name: "American Pale Ale", description: "Passionfruit and citrus aromas with a refreshing finish.")
 beer_30.photo.attach(io: file_b30, filename: 'nes.png', content_type: 'image/png')
 beer_30.save!

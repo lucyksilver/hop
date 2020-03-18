@@ -35,13 +35,13 @@
         <h2 class="second-header">FIND LOCAL BEER</h2>
         <div class="hop-it-btn-container">
           <span class="left-square"></span>
-          <%= link_to "HOP IT!", tags_path, class: "hop-it-btn" %>
+          <%= link_to "HOP IT!", tags_path, class: "hop-it-btn", data: { turbolinks: false }  %>
           <span class="right-square"></span>
         </div>
       </div>
 
       <div class="bottom-box d-flex justify-content-around">
-        <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-search-btn" %>
+        <%= link_to "CHOOSE A RANDOM BEER", random_beers_path, class: "home-search-btn", data: { turbolinks: false } %>
 
         <%= link_to "SEARCH 300 BREWS", beers_path, class: "home-search-btn" %>
 
