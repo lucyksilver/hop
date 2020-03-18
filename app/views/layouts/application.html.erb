@@ -5,7 +5,10 @@
     <title>HOP! The fun way to discover local beer that you love!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta property="og:title" content="HOP!"/>
+    <meta property="og:image" content="og-home-image.png"/>
+    <meta property="og:description"
+          content="The fun way to discover local beer that you love!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -26,6 +29,7 @@
   };
     </script>
   </head>
+
 
   <body>
     <%#= render 'shared/background-div' unless current_page?(root_path) %>
