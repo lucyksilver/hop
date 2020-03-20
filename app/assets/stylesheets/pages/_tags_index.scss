@@ -14,9 +14,10 @@
 }
 
 .big-tags-wrapper {
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .tags-header {
@@ -30,9 +31,8 @@
 
 .tags-form-group {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-gap: 25px;
-
 }
 
 .tag-active {
